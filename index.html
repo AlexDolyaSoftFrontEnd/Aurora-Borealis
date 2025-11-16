@@ -3,266 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>First in Space</title>
+    <title>Front-end Developer</title>
+
+    <meta name="title" content="Front-end Developer — Створення веб-інтерфейсів">
+    <meta name="description" content="Front-end Developer. Розробка інтерфейсів, React, анімації, оптимізація, адаптив, UI/UX. Якісні та швидкі рішення під ключ.">
+    <meta name="keywords" content="front-end, фронтенд, веб-розробка, розробник, react, javascript, js, html, css, ui, ux, створення сайтів, developer">
+    <meta name="author" content="Front-end Developer">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Ukrainian">
+    <meta name="theme-color" content="#1a1f3b">
+    <link rel="canonical" href="https://your-site-link.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Front-end Developer",
+      "jobTitle": "Frontend Developer",
+      "description": "Front-end Developer. React, анімації, логіка, оптимізація інтерфейсу. Професійна веб-розробка під ключ.",
+      "url": "https://your-site-link.com/",
+      "sameAs": [
+        "https://t.me/sasha_08170"
+      ]
+    }
+    </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Front-end Developer — Веб-інтерфейси та React">
+    <meta property="og:description" content="Розробка інтерфейсів, анімації, оптимізація та логіка під ключ. Якісно, швидко, професійно.">
+    <meta property="og:url" content="https://your-site-link.com/">
+    <meta property="og:site_name" content="Front-end Developer">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:image" content="https://your-site-link.com/preview.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Front-end Developer — React, UI, анімації">
+    <meta name="twitter:description" content="Анімації, логіка та оптимізація інтерфейсу. Роблю якісний та елегантний фронтенд.">
+    <meta name="twitter:image" content="https://your-site-link.com/preview.jpg">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Front-end Dev">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <style>
-        /* Блок: page */
-        .page {
+        :root {
+            --text-glow: linear-gradient(135deg, #ffffff, #dbe3ff);
+            --font: 'Inter', system-ui, sans-serif;
+            --bg1: #101326;
+            --bg3: #1e2347;
+        }
+
+        body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            text-align: center;
+            font-family: var(--font);
+            overflow: hidden;
+            background: var(--bg1);
+        }
+
+        .parallax-bg {
+            position: fixed;
+            inset: 0;
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(circle at 50% 50%, var(--bg3), var(--bg1));
+            will-change: transform;
+            transform: translateZ(0);
+            z-index: -3;
+        }
+
+        .layer {
+            position: fixed;
+            inset: -30%;
+            width: 160%;
+            height: 160%;
+            mix-blend-mode: screen;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .layer:nth-child(2) {
+            background: radial-gradient(circle, rgba(0, 153, 255, 0.25), transparent 70%);
+        }
+
+        .layer:nth-child(3) {
+            background: radial-gradient(circle, rgba(255, 80, 170, 0.22), transparent 70%);
+        }
+
+        .layer:nth-child(4) {
+            background: radial-gradient(circle, rgba(130, 80, 255, 0.18), transparent 70%);
+        }
+
+        .page {
+            position: relative;
+            z-index: 10;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            box-sizing: border-box;
-            position: relative;
-            overflow: hidden;
+            color: #fff;
+            text-align: center;
         }
 
-        .page::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://png.pngtree.com/thumb_back/fh260/background/20230704/pngtree-a-stylish-laptop-stands-against-a-cosmic-backdrop-image_3745141.jpg') no-repeat center center/cover;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        /* Блок: container */
         .container {
-            max-width: 600px;
-            width: 100%;
-            animation: fadeIn 0.8s ease-in;
-            position: relative;
-            z-index: 1;
+            max-width: 650px;
+            animation: fadeIn 1s ease;
         }
 
-        /* Блок: header */
-        .header {
-            margin-bottom: 30px;
-        }
-
-        /* Элемент: header__title */
         .header__title {
-            font-size: clamp(2.5em, 6vw, 4em);
+            font-size: clamp(2.3rem, 6vw, 4rem);
             margin: 0 0 20px;
             font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+            background: var(--text-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
         }
 
-        /* Блок: description */
-        .description {
+        .description__text {
+            font-size: clamp(1.1rem, 2.3vw, 1.3rem);
+            line-height: 1.7;
+            opacity: 0.92;
             margin-bottom: 40px;
         }
 
-        /* Элемент: description__text */
-        .description__text {
-            font-size: clamp(1.1em, 2.5vw, 1.3em);
-            margin: 0;
-            line-height: 1.7;
-            opacity: 0.9;
-            font-weight: 300;
-            letter-spacing: 0.01em;
-        }
-
-        /* Блок: actions */
         .actions {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        /* Блок: button */
         .button {
             display: block;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #ffffff;
-            padding: 18px 32px;
-            border-radius: 16px;
+            padding: 18px 30px;
+            border-radius: 14px;
             text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            transition: 0.25s ease;
             font-weight: 500;
-            font-size: clamp(1em, 2vw, 1.1em);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 0.02em;
-        }
-
-        .button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.1);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .button:hover::before {
-            opacity: 1;
         }
 
         .button:hover {
+            background: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
-        .button:active {
-            transform: translateY(0);
-        }
-
-        /* Модификатор: button--telegram */
         .button--telegram {
             background: linear-gradient(45deg, #0088cc, #00bfff);
-            box-shadow: 0 0 20px rgba(0, 136, 204, 0.8);
+            border: none;
         }
 
-        .button--telegram:hover {
-            box-shadow: 0 5px 30px rgba(0, 136, 204, 0.9);
-        }
-
-        /* Модификатор: button--maps */
         .button--maps {
             background: linear-gradient(45deg, #34a853, #4caf50);
-            box-shadow: 0 0 20px rgba(52, 168, 83, 0.8);
-        }
-
-        .button--maps:hover {
-            box-shadow: 0 5px 30px rgba(52, 168, 83, 0.9);
-        }
-
-
-        /* Элемент: button__text */
-        .button__text {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Анимации */
-        @keyframes glowText {
-            from {
-                text-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff;
-            }
-            to {
-                text-shadow: 0 0 25px #ff4081, 0 0 50px #ff4081;
-            }
-        }
-
-        @keyframes glowBtn {
-            from {
-                box-shadow: 0 0 20px rgba(255, 64, 129, 0.8), 0 0 40px rgba(255, 87, 34, 0.8);
-            }
-            to {
-                box-shadow: 0 0 30px rgba(0, 229, 255, 0.8), 0 0 60px rgba(0, 229, 255, 0.8);
-            }
+            border: none;
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .page {
-                padding: 15px;
-            }
-
-            .header {
-                margin-bottom: 20px;
-            }
-
-            .header__title {
-                margin-bottom: 15px;
-            }
-
-            .description {
-                margin-bottom: 30px;
-            }
-
-            .button {
-                padding: 16px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header__title {
-                font-size: 1.75em;
-            }
-
-            .description__text {
-                font-size: 0.95em;
-            }
-
-            .button {
-                padding: 14px 20px;
-                font-size: 0.95em;
-            }
-        }
-
-        /* Улучшение доступности */
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+            * { animation: none !important; transition: none !important; }
         }
     </style>
 </head>
-<body class="page">
-    <div class="container">
-        <header class="header">
-            <h1 class="header__title">First in Space</h1>
-        </header>
 
-        <div class="description">
+<body>
+
+    <div class="parallax-bg"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+
+    <div class="page">
+        <div class="container">
+            <h1 class="header__title">Front-end Developer</h1>
+
             <p class="description__text">
-                Професійна допомога у вирішенні комп'ютерних проблем.<br>
-                Звертайтеся, чекаю на ваші повідомлення
+                Анімації, логіка та оптимізація інтерфейсу.
             </p>
-        </div>
 
-        <div class="actions">
-            <a href="tel:+380933168359" class="button">
-                <span class="button__text">+380 93 316 8359</span>
-            </a>
-            <a href="https://t.me/IgorWeretaPC" class="button button--telegram" target="_blank" rel="noopener noreferrer">
+            <div class="actions">
+                <a href="tel:+380973234711" class="button">+380 97 323 47 11</a>
 
-                <span class="button__text">Telegram</span>
-            </a>
-            <a href="https://maps.app.goo.gl/DxKBpGCqzVo5uvG76" class="button button--maps" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/sasha_08170"
+                   class="button button--telegram"
+                   target="_blank" rel="noopener">
+                    Telegram
+                </a>
 
-                <span class="button__text">Google Maps</span>
-            </a>
+                <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
+                   class="button button--maps"
+                   target="_blank" rel="noopener">
+                    Google Maps
+                </a>
+            </div>
         </div>
     </div>
+
+<script>
+let targetX = 0, targetY = 0;
+let currentX = 0, currentY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    targetX = (e.clientX - window.innerWidth / 2) / 150;
+    targetY = (e.clientY - window.innerHeight / 2) / 150;
+});
+
+function animate() {
+    currentX += (targetX - currentX) * 0.07;
+    currentY += (targetY - currentY) * 0.07;
+
+    document.querySelector(".parallax-bg").style.transform =
+        `translate(${currentX * 10}px, ${currentY * 10}px) scale(1.05)`;
+
+    const layers = document.querySelectorAll(".layer");
+    layers.forEach((layer, i) => {
+        let depth = (i + 1) * 18;
+        layer.style.transform =
+            `translate(${currentX * depth}px, ${currentY * depth}px)`;
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
 </body>
 </html>
+
