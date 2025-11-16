@@ -5,52 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front-end Developer</title>
 
-    <meta name="title" content="Front-end Developer — Створення веб-інтерфейсів">
-    <meta name="description" content="Front-end Developer. Розробка інтерфейсів, React, анімації, оптимізація, адаптив, UI/UX. Якісні та швидкі рішення під ключ.">
-    <meta name="keywords" content="front-end, фронтенд, веб-розробка, розробник, react, javascript, js, html, css, ui, ux, створення сайтів, developer">
-    <meta name="author" content="Front-end Developer">
+    <meta name="title" content="Front-end Developer">
+    <meta name="description" content="Front-end Developer. Розробка інтерфейсів, React, анімації, оптимізація, адаптив, UI/UX.">
+    <meta name="keywords" content="Front-end, фронтенд, веб-розробка, розробник, react, javascript, js, html, css, ui, ux.">
+    <meta name="author" content="Олександр Долинський">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Ukrainian">
     <meta name="theme-color" content="#1a1f3b">
-    <link rel="canonical" href="https://your-site-link.com/">
+    <link rel="canonical" href="https://github.com/BitAlchemy-spec">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
       "@type": "Person",
-      "name": "Front-end Developer",
-      "jobTitle": "Frontend Developer",
-      "description": "Front-end Developer. React, анімації, логіка, оптимізація інтерфейсу. Професійна веб-розробка під ключ.",
-      "url": "https://your-site-link.com/",
-      "sameAs": [
-        "https://t.me/sasha_08170"
-      ]
+      "name": "Олександр Долинський",
+      "jobTitle": "Front-end Developer",
+      "description": "Front-end Developer. React, анімації, логіка, оптимізація інтерфейсу.",
+      "url": "https://github.com/BitAlchemy-spec",
+      "sameAs": [ "https://t.me/sasha_08170" ]
     }
     </script>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Front-end Developer — Веб-інтерфейси та React">
-    <meta property="og:description" content="Розробка інтерфейсів, анімації, оптимізація та логіка під ключ. Якісно, швидко, професійно.">
-    <meta property="og:url" content="https://your-site-link.com/">
+    <meta property="og:title" content="Олександр Долинський — Front-end Developer">
+    <meta property="og:description" content="Розробка інтерфейсів, оптимізація та логіка. Якісно, швидко, професійно.">
+    <meta property="og:url" content="https://github.com/BitAlchemy-spec">
     <meta property="og:site_name" content="Front-end Developer">
     <meta property="og:locale" content="uk_UA">
-    <meta property="og:image" content="https://your-site-link.com/preview.jpg">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Front-end Developer — React, UI, анімації">
-    <meta name="twitter:description" content="Анімації, логіка та оптимізація інтерфейсу. Роблю якісний та елегантний фронтенд.">
-    <meta name="twitter:image" content="https://your-site-link.com/preview.jpg">
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Front-end Dev">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <style>
         :root {
-            --text-glow: linear-gradient(135deg, #ffffff, #dbe3ff);
             --font: 'Inter', system-ui, sans-serif;
+            --fs-h1: clamp(2.4rem, 6vw, 4.2rem);
+            --fs-author: clamp(1.25rem, 2.8vw, 1.75rem);
+            --fs-text: clamp(1.05rem, 2.2vw, 1.3rem);
+            --fs-button: clamp(1rem, 2vw, 1.15rem);
+            --lh-tight: 1.1;
+            --lh-base: 1.6;
+            --lh-text: 1.75;
+            --space-xs: clamp(10px, 2vw, 16px);
+            --space-sm: clamp(16px, 3vw, 24px);
+            --space-md: clamp(24px, 4vw, 32px);
+            --space-lg: clamp(32px, 6vw, 48px);
+            --space-xl: clamp(48px, 10vw, 80px);
+            --text-glow: linear-gradient(135deg, #ffffff, #e8edff);
             --bg1: #101326;
             --bg3: #1e2347;
         }
@@ -58,97 +56,112 @@
         body {
             margin: 0;
             font-family: var(--font);
-            overflow: hidden;
             background: var(--bg1);
+            overflow: hidden;
         }
+
 
         .parallax-bg {
             position: fixed;
             inset: 0;
-            width: 110%;
-            height: 110%;
+            width: 120%;
+            height: 120%;
             background: radial-gradient(circle at 50% 50%, var(--bg3), var(--bg1));
             will-change: transform;
-            transform: translateZ(0);
             z-index: -3;
         }
 
         .layer {
             position: fixed;
-            inset: -30%;
-            width: 160%;
-            height: 160%;
+            inset: -40%;
+            width: 180%;
+            height: 180%;
             mix-blend-mode: screen;
             pointer-events: none;
             will-change: transform;
         }
 
         .layer:nth-child(2) {
-            background: radial-gradient(circle, rgba(0, 153, 255, 0.25), transparent 70%);
+            background: radial-gradient(circle, rgba(0,153,255,0.25), transparent 70%);
         }
-
         .layer:nth-child(3) {
-            background: radial-gradient(circle, rgba(255, 80, 170, 0.22), transparent 70%);
+            background: radial-gradient(circle, rgba(255,80,170,0.22), transparent 70%);
         }
-
         .layer:nth-child(4) {
-            background: radial-gradient(circle, rgba(130, 80, 255, 0.18), transparent 70%);
+            background: radial-gradient(circle, rgba(130,80,255,0.18), transparent 70%);
         }
 
         .page {
-            position: relative;
-            z-index: 10;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: var(--space-md);
             color: #fff;
             text-align: center;
         }
 
         .container {
             max-width: 650px;
-            animation: fadeIn 1s ease;
+            width: 100%;
+            animation: fadeIn 1.2s ease;
         }
 
         .header__title {
-            font-size: clamp(2.3rem, 6vw, 4rem);
-            margin: 0 0 20px;
+            font-size: var(--fs-h1);
             font-weight: 800;
+            line-height: var(--lh-tight);
+            margin-bottom: var(--space-sm);
             background: var(--text-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .author {
+            font-size: var(--fs-author);
+            font-weight: 600;
+            margin: calc(var(--space-xs) * -0.4) 0 var(--space-sm);
+            background: var(--text-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: fadeAuthor 1.3s ease forwards 0.3s;
+        }
+
+        @keyframes fadeAuthor {
+            from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
         .description__text {
-            font-size: clamp(1.1rem, 2.3vw, 1.3rem);
-            line-height: 1.7;
+            font-size: var(--fs-text);
+            line-height: var(--lh-text);
             opacity: 0.92;
-            margin-bottom: 40px;
+            margin-bottom: var(--space-lg);
         }
 
         .actions {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: var(--space-sm);
         }
 
         .button {
             display: block;
-            padding: 18px 30px;
+            padding: clamp(14px, 3vw, 20px) clamp(24px, 5vw, 34px);
+            font-size: var(--fs-button);
             border-radius: 14px;
             text-decoration: none;
             color: #fff;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
             backdrop-filter: blur(8px);
             transition: 0.25s ease;
             font-weight: 500;
         }
 
         .button:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255,255,255,0.15);
             transform: translateY(-2px);
         }
 
@@ -164,12 +177,18 @@
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(18px); }
-            to   { opacity: 1; transform: translateY(0); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            * { animation: none !important; transition: none !important; }
+        @media (max-width: 480px) {
+            .page {
+                padding: var(--space-sm);
+            }
+            .container {
+                max-width: 90%;
+            }
         }
+
     </style>
 </head>
 
@@ -184,22 +203,18 @@
         <div class="container">
             <h1 class="header__title">Front-end Developer</h1>
 
-            <p class="description__text">
-                Анімації, логіка та оптимізація інтерфейсу.
-            </p>
+            <p class="author">Олександр Долинський</p>
+
+            <p class="description__text">Логіка та оптимізація інтерфейсу</p>
 
             <div class="actions">
                 <a href="tel:+380973234711" class="button">+380 97 323 47 11</a>
 
-                <a href="https://t.me/sasha_08170"
-                   class="button button--telegram"
-                   target="_blank" rel="noopener">
+                <a href="https://t.me/sasha_08170" class="button button--telegram" target="_blank">
                     Telegram
                 </a>
 
-                <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
-                   class="button button--maps"
-                   target="_blank" rel="noopener">
+                <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499" class="button button--maps" target="_blank">
                     Google Maps
                 </a>
             </div>
@@ -220,11 +235,11 @@ function animate() {
     currentY += (targetY - currentY) * 0.07;
 
     document.querySelector(".parallax-bg").style.transform =
-        `translate(${currentX * 10}px, ${currentY * 10}px) scale(1.05)`;
+        `translate(${currentX * 10}px, ${currentY * 10}px) scale(1.03)`;
 
     const layers = document.querySelectorAll(".layer");
     layers.forEach((layer, i) => {
-        let depth = (i + 1) * 18;
+        let depth = (i + 1) * 12;
         layer.style.transform =
             `translate(${currentX * depth}px, ${currentY * depth}px)`;
     });
