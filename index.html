@@ -53,12 +53,10 @@
     </script>
 
     <!-- Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Google Font -->
+    <!-- Font -->
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
     </style>
@@ -73,50 +71,32 @@
             --fs-text: clamp(1.1rem, 2.2vw, 1.35rem);
             --fs-btn: clamp(1.05rem, 2vw, 1.2rem);
 
-            --letter-tight: -0.025em;
-
-            --space-sm: 1rem;
-            --space-md: 1.7rem;
-            --space-lg: 2.5rem;
-
             --bg-base: hsl(232 42% 7%);
-            --overlay-1: hsl(222 60% 16% / 0.7);
-            --overlay-2: hsl(260 55% 18% / 0.7);
 
             --glass: hsl(230 32% 14% / 0.7);
             --glass-border: hsl(220 80% 90% / 0.22);
 
-            --accent-blue: hsl(213 100% 58%);
-            --accent-blue-light: hsl(213 100% 68%);
-            --accent-green: hsl(142 70% 50%);
-            --accent-green-light: hsl(142 70% 58%);
-
-            --glow-vision: 0 0 60px hsl(240 80% 70% / 0.25);
-            --glow-vision-hover: 0 0 85px hsl(240 90% 75% / 0.35);
-
             --depth-shadow: 0 35px 90px hsl(240 60% 5% / 0.7),
-                0 10px 25px hsl(240 90% 5% / 0.35);
+                            0 10px 25px hsl(240 90% 5% / 0.35);
         }
 
         body {
             margin: 0;
             font-family: var(--font);
             background: radial-gradient(circle at top left, hsl(213 100% 35% / 0.22), transparent 55%),
-                radial-gradient(circle at bottom right, hsl(260 80% 40% / 0.24), transparent 55%),
-                var(--bg-base);
+                        radial-gradient(circle at bottom right, hsl(260 80% 40% / 0.24), transparent 55%),
+                        var(--bg-base);
             overflow: hidden;
             color: #fff;
-            letter-spacing: var(--letter-tight);
         }
 
-        /* Parallax */
         .parallax-bg {
             position: fixed;
             inset: -10%;
             width: 120%;
             height: 120%;
-            background: radial-gradient(circle at 50% 20%, var(--overlay-1), transparent 65%),
-                radial-gradient(circle at 50% 80%, var(--overlay-2), transparent 60%);
+            background: radial-gradient(circle at 50% 20%, hsl(222 60% 16% / 0.7), transparent 65%),
+                        radial-gradient(circle at 50% 80%, hsl(260 55% 18% / 0.7), transparent 60%);
             z-index: -3;
         }
 
@@ -125,148 +105,118 @@
             inset: -40%;
             width: 180%;
             height: 180%;
-            pointer-events: none;
             mix-blend-mode: screen;
+            pointer-events: none;
         }
 
-        /* Layout */
         .landing {
             min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: var(--space-md);
+            align-items: center;
+            padding: 2rem;
         }
 
         .landing__card {
             width: 100%;
             max-width: 44rem;
-            padding: var(--space-lg);
+            padding: 2.5rem;
             text-align: center;
             border-radius: 1.8rem;
 
             background: var(--glass);
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(26px) saturate(140%);
-
-            box-shadow: var(--depth-shadow), var(--glow-vision);
+            box-shadow: var(--depth-shadow);
 
             opacity: 0;
             transform: translateY(30px) scale(0.96);
-            animation: cardFade 1.3s ease forwards;
-            transition: 0.4s ease;
+            animation: fadeCard 1.2s ease forwards;
         }
 
-        .landing__card:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: var(--depth-shadow), var(--glow-vision-hover);
-            border-color: hsl(220 90% 95% / 0.35);
-        }
-
-        @keyframes cardFade {
-            0% {
-                opacity: 0;
-                filter: blur(10px);
-            }
-            100% {
-                opacity: 1;
-                filter: blur(0);
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Text animations */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(14px);
-                filter: blur(6px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-                filter: blur(0);
-            }
+        @keyframes fadeCard {
+            0% { opacity: 0; transform: translateY(30px) scale(0.96); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         .landing__title {
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards 0.25s;
             font-size: var(--fs-h1);
             font-weight: 800;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #fff, hsl(210 30% 92%));
+            background: linear-gradient(135deg, #fff, #e9edff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: .5rem;
         }
 
         .landing__author {
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards 0.5s;
             font-size: var(--fs-author);
-            font-weight: 500;
-            margin-bottom: 0.6rem;
-            background: linear-gradient(135deg, #fff, hsl(210 30% 92%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            opacity: .9;
+            margin-bottom: .5rem;
         }
 
         .landing__tagline {
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards 0.75s;
             font-size: var(--fs-text);
-            margin-bottom: var(--space-md);
-            background: linear-gradient(135deg, #eef2ff, hsl(210 30% 88%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            opacity: .8;
+            margin-bottom: 2rem;
         }
 
-        /* Buttons */
         .landing__actions {
             display: flex;
             flex-direction: column;
-            gap: 1.4rem;
+            gap: 1.3rem;
         }
 
         .landing__button {
-            opacity: 0;
-            animation: fadeInUp 0.9s ease forwards 1s;
-
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: 999px;
+            color: #fff;
             font-size: var(--fs-btn);
-            color: white;
             text-decoration: none;
-
-            background: hsl(0 0% 100% / 0.06);
-            border: 1px solid hsl(0 0% 100% / 0.18);
-            backdrop-filter: blur(18px);
             transition: 0.25s ease;
-        }
-
-        .landing__button:hover {
-            background: hsl(0 0% 100% / 0.14);
-            transform: translateY(-3px);
+            border: none;
         }
 
         .landing__button i {
-            margin-right: 0.55rem;
-            font-size: 1.2rem;
+            margin-right: .6rem;
+            font-size: 1.25rem;
         }
 
+        /* Telegram — синий неон */
         .landing__button--telegram {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
-            border: none;
-            animation-delay: 1.2s;
+            background: linear-gradient(135deg, #1b8fff, #55c8ff);
+            box-shadow: 0 0 25px rgba(85, 200, 255, 0.35);
+            animation: fadeBtn 1s ease forwards 0.4s;
+        }
+        .landing__button--telegram:hover {
+            background: linear-gradient(135deg, #45a9ff, #7dd8ff);
         }
 
+        /* WhatsApp — яркий зелёный */
+        .landing__button--whatsapp {
+            background: linear-gradient(135deg, #1bd267, #37ef87);
+            box-shadow: 0 0 25px rgba(55, 239, 135, 0.35);
+            animation: fadeBtn 1s ease forwards 0.6s;
+        }
+        .landing__button--whatsapp:hover {
+            background: linear-gradient(135deg, #37ef87, #5bffab);
+        }
+
+        /* Google Maps — оранжево-жёлтый */
         .landing__button--maps {
-            background: linear-gradient(135deg, var(--accent-green), var(--accent-green-light));
-            border: none;
-            animation-delay: 1.4s;
+            background: linear-gradient(135deg, #ffb340, #ff8800);
+            box-shadow: 0 0 25px rgba(255, 153, 0, 0.35);
+            animation: fadeBtn 1s ease forwards 0.8s;
+        }
+        .landing__button--maps:hover {
+            background: linear-gradient(135deg, #ffc562, #ff9a1c);
+        }
+
+        @keyframes fadeBtn {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -279,44 +229,43 @@
 
     <main class="landing">
         <section class="landing__card">
-            <header class="landing__header">
-                <h1 class="landing__title">Front-end Developer</h1>
-                <p class="landing__author">Олександр Долинський</p>
-                <p class="landing__tagline">Логіка та інтерфейсна взаємодія</p>
-            </header>
+            <h1 class="landing__title">Front-end Developer</h1>
+            <p class="landing__author">Олександр Долинський</p>
+            <p class="landing__tagline">Логіка та інтерфейсна взаємодія</p>
 
             <nav class="landing__actions">
-                <a href="tel:+380973234711" class="landing__button">
-                    <i class="fa-solid fa-phone"></i>
-                    +380 97 323 47 11
-                </a>
 
-                <a
-                    href="https://t.me/sasha_08170"
-                    class="landing__button landing__button--telegram"
-                    target="_blank"
-                >
+                <!-- Telegram -->
+                <a href="https://t.me/sasha_08170"
+                   class="landing__button landing__button--telegram"
+                   target="_blank">
                     <i class="fa-brands fa-telegram"></i>
                     Telegram
                 </a>
 
-                <a
-                    href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
-                    class="landing__button landing__button--maps"
-                    target="_blank"
-                >
+                <!-- WhatsApp -->
+                <a href="https://wa.me/380973234711"
+                   class="landing__button landing__button--whatsapp"
+                   target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <!-- Google Maps -->
+                <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
+                   class="landing__button landing__button--maps"
+                   target="_blank">
                     <i class="fa-solid fa-location-dot"></i>
                     Google Maps
                 </a>
+
             </nav>
         </section>
     </main>
 
     <script>
-        let targetX = 0,
-            targetY = 0;
-        let currentX = 0,
-            currentY = 0;
+        let targetX = 0, targetY = 0;
+        let currentX = 0, currentY = 0;
 
         document.addEventListener("mousemove", (e) => {
             targetX = (e.clientX - window.innerWidth / 2) / 160;
@@ -327,17 +276,13 @@
             currentX += (targetX - currentX) * 0.07;
             currentY += (targetY - currentY) * 0.07;
 
-            document.querySelector(
-                ".parallax-bg"
-            ).style.transform = `translate(${currentX * 10}px, ${
-                currentY * 10
-            }px) scale(1.03)`;
+            document.querySelector(".parallax-bg").style.transform =
+                `translate(${currentX * 10}px, ${currentY * 10}px) scale(1.03)`;
 
             document.querySelectorAll(".parallax__layer").forEach((layer, i) => {
-                const depth = (i + 1) * 10;
-                layer.style.transform = `translate(${currentX * depth}px, ${
-                    currentY * depth
-                }px)`;
+                const d = (i + 1) * 10;
+                layer.style.transform =
+                    `translate(${currentX * d}px, ${currentY * d}px)`;
             });
 
             requestAnimationFrame(animate);
