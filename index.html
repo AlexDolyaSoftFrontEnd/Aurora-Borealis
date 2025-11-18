@@ -9,7 +9,6 @@
     <meta name="author" content="Олександр Долинський" />
     <meta name="theme-color" content="hsl(230 40% 10%)" />
 
-    <!-- VisionOS App Icon Favicon -->
     <link
         rel="icon"
         type="image/svg+xml"
@@ -21,26 +20,19 @@
     %3Cstop offset='50%25' stop-color='hsl(255,85%25,65%25)'/%3E
     %3Cstop offset='100%25' stop-color='hsl(280,70%25,55%25)'/%3E
     %3C/radialGradient%3E
-
     %3CradialGradient id='glow' cx='50%25' cy='50%25' r='75%25'%3E
     %3Cstop offset='0%25' stop-color='rgba(255,255,255,0.45)'/%3E
     %3Cstop offset='100%25' stop-color='rgba(255,255,255,0)'/%3E
     %3C/radialGradient%3E
-
     %3Cfilter id='innerShadow'%3E
     %3CfeDropShadow dx='0' dy='0' stdDeviation='35' flood-color='rgba(0,0,0,0.35)'/%3E
     %3C/filter%3E
     %3C/defs%3E
-
-    %3Crect x='90' y='90' width='844' height='844' rx='210'
-    fill='url(%23bg)'/%3E
-
-    %3Crect x='90' y='90' width='844' height='844' rx='210'
-    fill='url(%23glow)' filter='url(%23innerShadow)'/%3E
+    %3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23bg)'/%3E
+    %3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23glow)' filter='url(%23innerShadow)'/%3E
     %3C/svg%3E"
     />
 
-    <!-- Schema -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -52,30 +44,23 @@
         }
     </script>
 
-    <!-- Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Font -->
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
     </style>
 
-    <!-- Styles -->
     <style>
         :root {
             --font: "Outfit", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-
             --fs-h1: clamp(2.3rem, 5.4vw, 3.55rem);
             --fs-author: clamp(1.35rem, 2.8vw, 1.9rem);
             --fs-text: clamp(1.1rem, 2.2vw, 1.35rem);
             --fs-btn: clamp(1.05rem, 2vw, 1.2rem);
-
             --bg-base: hsl(232 42% 7%);
-
             --glass: hsl(230 32% 14% / 0.7);
             --glass-border: hsl(220 80% 90% / 0.22);
-
             --depth-shadow: 0 35px 90px hsl(240 60% 5% / 0.7),
                             0 10px 25px hsl(240 90% 5% / 0.35);
         }
@@ -88,6 +73,11 @@
                         var(--bg-base);
             overflow: hidden;
             color: #fff;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            line-height: 1.55;
         }
 
         .parallax-bg {
@@ -123,12 +113,10 @@
             padding: 2.5rem;
             text-align: center;
             border-radius: 1.8rem;
-
             background: var(--glass);
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(26px) saturate(140%);
             box-shadow: var(--depth-shadow);
-
             opacity: 0;
             transform: translateY(30px) scale(0.96);
             animation: fadeCard 1.2s ease forwards;
@@ -142,22 +130,30 @@
         .landing__title {
             font-size: var(--fs-h1);
             font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
             background: linear-gradient(135deg, #fff, #e9edff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: .5rem;
+            margin-bottom: .6rem;
         }
 
         .landing__author {
             font-size: var(--fs-author);
-            opacity: .9;
-            margin-bottom: .5rem;
+            opacity: .92;
+            font-weight: 500;
+            line-height: 1.28;
+            letter-spacing: -0.01em;
+            margin-bottom: .4rem;
         }
 
         .landing__tagline {
             font-size: var(--fs-text);
-            opacity: .8;
-            margin-bottom: 2rem;
+            opacity: .85;
+            line-height: 1.45;
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            margin-bottom: 2.1rem;
         }
 
         .landing__actions {
@@ -175,43 +171,59 @@
             color: #fff;
             font-size: var(--fs-btn);
             text-decoration: none;
-            transition: 0.25s ease;
             border: none;
+            cursor: pointer;
+            font-weight: 600;
+            line-height: 1;
+            transition: transform .35s cubic-bezier(.25, .8, .25, 1),
+                        box-shadow .35s cubic-bezier(.25, .8, .25, 1),
+                        background .35s cubic-bezier(.25, .8, .25, 1);
+            transform: translateY(0) scale(1);
+        }
+
+        .landing__button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 0 35px rgba(255,255,255,0.25);
+        }
+
+        .landing__button:active {
+            transform: scale(0.97);
         }
 
         .landing__button i {
-            margin-right: .6rem;
+            margin-right: .55rem;
             font-size: 1.25rem;
+            transform: translateY(1px);
         }
 
-        /* Telegram — синий неон */
         .landing__button--telegram {
             background: linear-gradient(135deg, #1b8fff, #55c8ff);
-            box-shadow: 0 0 25px rgba(85, 200, 255, 0.35);
+            box-shadow: 0 0 20px rgba(85, 200, 255, 0.25);
             animation: fadeBtn 1s ease forwards 0.4s;
         }
         .landing__button--telegram:hover {
             background: linear-gradient(135deg, #45a9ff, #7dd8ff);
+            box-shadow: 0 0 35px rgba(85, 200, 255, 0.45);
         }
 
-        /* WhatsApp — яркий зелёный */
         .landing__button--whatsapp {
             background: linear-gradient(135deg, #1bd267, #37ef87);
-            box-shadow: 0 0 25px rgba(55, 239, 135, 0.35);
+            box-shadow: 0 0 20px rgba(55, 239, 135, 0.25);
             animation: fadeBtn 1s ease forwards 0.6s;
         }
         .landing__button--whatsapp:hover {
             background: linear-gradient(135deg, #37ef87, #5bffab);
+            box-shadow: 0 0 35px rgba(55, 239, 135, 0.45);
         }
 
-        /* Google Maps — оранжево-жёлтый */
         .landing__button--maps {
             background: linear-gradient(135deg, #ffb340, #ff8800);
-            box-shadow: 0 0 25px rgba(255, 153, 0, 0.35);
+            box-shadow: 0 0 20px rgba(255, 153, 0, 0.25);
             animation: fadeBtn 1s ease forwards 0.8s;
         }
         .landing__button--maps:hover {
             background: linear-gradient(135deg, #ffc562, #ff9a1c);
+            box-shadow: 0 0 35px rgba(255, 153, 0, 0.45);
         }
 
         @keyframes fadeBtn {
@@ -235,7 +247,6 @@
 
             <nav class="landing__actions">
 
-                <!-- Telegram -->
                 <a href="https://t.me/sasha_08170"
                    class="landing__button landing__button--telegram"
                    target="_blank">
@@ -243,7 +254,6 @@
                     Telegram
                 </a>
 
-                <!-- WhatsApp -->
                 <a href="https://wa.me/380973234711"
                    class="landing__button landing__button--whatsapp"
                    target="_blank">
@@ -251,7 +261,6 @@
                     WhatsApp
                 </a>
 
-                <!-- Google Maps -->
                 <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
                    class="landing__button landing__button--maps"
                    target="_blank">
