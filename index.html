@@ -4,109 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ==========================================================
-         SEO & INDEXING SETTINGS
-    =========================================================== -->
-
     <title>Front-end Developer — Олександр Долинський</title>
     <meta name="description" content="Логіка та інтерфейсна взаємодія." />
     <meta name="keywords" content="Front-end developer, інтерфейс, логіка, веб-розробка." />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="theme-color" content="hsl(230 40% 10%)" />
-    <meta http-equiv="Content-Language" content="uk-UA" />
+    <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://github.com/BitAlchemy-spec" />
-
-    <!-- ==========================================================
-         Open Graph + Twitter
-    =========================================================== -->
-
-    <meta property="og:type" content="profile" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Front-end Developer — Олександр Долинський" />
     <meta property="og:description" content="Логіка та інтерфейсна взаємодія." />
-    <meta property="og:url" content="https://github.com/BitAlchemy-spec" />
+    <meta property="og:url" content="https://sashasoftfrontend.github.io/React/" />
     <meta property="og:locale" content="uk_UA" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Front-end Developer — Олександр Долинський" />
-    <meta name="twitter:description" content="Логіка та інтерфейсна взаємодія." />
 
-    <!-- ==========================================================
-         Structured Data (Schema.org)
-    =========================================================== -->
-
-    <!-- Person -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Олександр Долинський",
         "jobTitle": "Front-end Developer",
-        "nationality": "Ukrainian",
-        "url": "https://github.com/BitAlchemy-spec",
-        "image": "https://github.com/BitAlchemy-spec.png",
+        "url": "https://sashasoftfrontend.github.io/React/",
         "sameAs": [
+            "https://www.linkedin.com/in/sashasoftfrontend/",
             "https://t.me/sasha_08170"
         ]
     }
     </script>
 
-    <!-- WebSite -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Front-end Developer",
-        "url": "https://github.com/BitAlchemy-spec",
-        "publisher": {
-            "@type": "Person",
-            "name": "Олександр Долинський"
-        },
-        "inLanguage": "uk-UA"
-    }
-    </script>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='30%25' cy='30%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='hsl(215,100%25,85%25)'/%3E%3Cstop offset='50%25' stop-color='hsl(255,85%25,65%25)'/%3E%3Cstop offset='100%25' stop-color='hsl(280,70%25,55%25)'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23bg)'/%3E%3C/svg%3E">
 
-    <!-- WebPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Front-end Developer",
-        "url": "https://github.com/BitAlchemy-spec",
-        "description": "Логіка та інтерфейсна взаємодія.",
-        "inLanguage": "uk-UA"
-    }
-    </script>
-
-    <!-- ==========================================================
-         Favicon (SVG)
-    =========================================================== -->
-
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="data:image/svg+xml,
-        %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E
-        %3Cdefs%3E
-        %3CradialGradient id='bg' cx='30%25' cy='30%25' r='80%25'%3E
-        %3Cstop offset='0%25' stop-color='hsl(215,100%25,85%25)'/%3E
-        %3Cstop offset='50%25' stop-color='hsl(255,85%25,65%25)'/%3E
-        %3Cstop offset='100%25' stop-color='hsl(280,70%25,55%25)'/%3E
-        %3C/radialGradient%3E
-        %3C/defs%3E
-        %3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23bg)'/%3E
-        %3C/svg%3E"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-    </style>
 
-    <style>
         :root {
-            --font: "Outfit", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            --font: "Outfit", sans-serif;
             --fs-h1: clamp(2.3rem, 5.4vw, 3.55rem);
             --fs-author: clamp(1.35rem, 2.8vw, 1.9rem);
             --fs-text: clamp(1.1rem, 2.2vw, 1.35rem);
@@ -114,43 +44,46 @@
             --bg-base: hsl(232 42% 7%);
             --glass: hsl(230 32% 14% / 0.7);
             --glass-border: hsl(220 80% 90% / 0.22);
-            --depth-shadow: 0 35px 90px hsl(240 60% 5% / 0.7),
-                            0 10px 25px hsl(240 90% 5% / 0.35);
+            --shadow: 0 35px 90px hsl(240 60% 5% / 0.7);
         }
 
         body {
             margin: 0;
             font-family: var(--font);
-            background: radial-gradient(circle at top left, hsl(213 100% 35% / 0.22), transparent 55%),
-                        radial-gradient(circle at bottom right, hsl(260 80% 40% / 0.24), transparent 55%),
-                        var(--bg-base);
-            overflow: hidden;
+            background: var(--bg-base);
             color: #fff;
+            overflow: hidden;
+            perspective: 1200px;
+        }
 
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            line-height: 1.55;
+        .parallax-bg,
+        .parallax__layer {
+            position: fixed;
+            pointer-events: none;
+            transform-style: preserve-3d;
         }
 
         .parallax-bg {
-            position: fixed;
             inset: -10%;
             width: 120%;
             height: 120%;
-            background: radial-gradient(circle at 50% 20%, hsl(222 60% 16% / 0.7), transparent 65%),
-                        radial-gradient(circle at 50% 80%, hsl(260 55% 18% / 0.7), transparent 60%);
+            background:
+                radial-gradient(circle at 50% 20%, hsl(222 60% 16% / 0.7), transparent 65%),
+                radial-gradient(circle at 50% 80%, hsl(260 55% 18% / 0.7), transparent 60%);
             z-index: -3;
+            transform: translateZ(-200px) scale(1.2);
         }
 
         .parallax__layer {
-            position: fixed;
             inset: -40%;
             width: 180%;
             height: 180%;
             mix-blend-mode: screen;
-            pointer-events: none;
         }
+
+        .parallax__layer:nth-child(2) { transform: translateZ(-100px) scale(1.1); }
+        .parallax__layer:nth-child(3) { transform: translateZ(-50px) scale(1.05); }
+        .parallax__layer:nth-child(4) { transform: translateZ(0px) scale(1); }
 
         .landing {
             min-height: 100vh;
@@ -158,130 +91,89 @@
             justify-content: center;
             align-items: center;
             padding: 2rem;
+            position: relative;
+            transform-style: preserve-3d;
         }
 
         .landing__card {
-            width: 100%;
             max-width: 44rem;
             padding: 2.5rem;
             text-align: center;
-            border-radius: 1.8rem;
             background: var(--glass);
+            border-radius: 1.8rem;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(26px) saturate(140%);
-            box-shadow: var(--depth-shadow);
+            box-shadow: var(--shadow);
+            transform: translateZ(60px);
             opacity: 0;
-            transform: translateY(30px) scale(0.96);
             animation: fadeCard 1.2s ease forwards;
         }
 
         @keyframes fadeCard {
-            0% { opacity: 0; transform: translateY(30px) scale(0.96); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
+            to { opacity: 1; transform: translateZ(60px); }
         }
 
         .landing__title {
             font-size: var(--fs-h1);
             font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
             background: linear-gradient(135deg, #fff, #e9edff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: .6rem;
         }
 
         .landing__author {
             font-size: var(--fs-author);
             opacity: .92;
-            font-weight: 500;
-            line-height: 1.28;
-            letter-spacing: -0.01em;
             margin-bottom: .4rem;
+            min-height: 2.2rem;
         }
 
         .landing__tagline {
             font-size: var(--fs-text);
             opacity: .85;
-            line-height: 1.45;
-            font-weight: 400;
-            letter-spacing: 0.005em;
-            margin-bottom: 2.1rem;
+            margin-bottom: 2rem;
         }
 
         .landing__actions {
             display: flex;
             flex-direction: column;
-            gap: 1.3rem;
+            gap: 1.2rem;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
         }
 
         .landing__button {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             padding: 1rem 2rem;
             border-radius: 999px;
-            color: #fff;
             font-size: var(--fs-btn);
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
             font-weight: 600;
-            line-height: 1;
-            transition: transform .35s cubic-bezier(.25, .8, .25, 1),
-                        box-shadow .35s cubic-bezier(.25, .8, .25, 1),
-                        background .35s cubic-bezier(.25, .8, .25, 1);
-            transform: translateY(0) scale(1);
+            color: #fff;
+            text-decoration: none;
+            transition: transform .35s, filter .35s, box-shadow .35s;
+            backdrop-filter: blur(4px);
+            width: 100%;
         }
 
         .landing__button:hover {
             transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 0 35px rgba(255,255,255,0.25);
+            filter: brightness(1.2);
+            box-shadow: 0 0 35px rgba(255,255,255,0.35);
         }
 
-        .landing__button:active {
-            transform: scale(0.97);
-        }
-
-        .landing__button i {
-            margin-right: .55rem;
-            font-size: 1.25rem;
-            transform: translateY(1px);
+        .landing__button--linkedin {
+            background: linear-gradient(135deg, #0a66c2, #3fa8ff);
         }
 
         .landing__button--telegram {
             background: linear-gradient(135deg, #1b8fff, #55c8ff);
-            box-shadow: 0 0 20px rgba(85, 200, 255, 0.25);
-            animation: fadeBtn 1s ease forwards 0.4s;
-        }
-        .landing__button--telegram:hover {
-            background: linear-gradient(135deg, #45a9ff, #7dd8ff);
-            box-shadow: 0 0 35px rgba(85, 200, 255, 0.45);
         }
 
         .landing__button--whatsapp {
             background: linear-gradient(135deg, #1bd267, #37ef87);
-            box-shadow: 0 0 20px rgba(55, 239, 135, 0.25);
-            animation: fadeBtn 1s ease forwards 0.6s;
-        }
-        .landing__button--whatsapp:hover {
-            background: linear-gradient(135deg, #37ef87, #5bffab);
-            box-shadow: 0 0 35px rgba(55, 239, 135, 0.45);
-        }
-
-        .landing__button--maps {
-            background: linear-gradient(135deg, #ffb340, #ff8800);
-            box-shadow: 0 0 20px rgba(255, 153, 0, 0.25);
-            animation: fadeBtn 1s ease forwards 0.8s;
-        }
-        .landing__button--maps:hover {
-            background: linear-gradient(135deg, #ffc562, #ff9a1c);
-            box-shadow: 0 0 35px rgba(255, 153, 0, 0.45);
-        }
-
-        @keyframes fadeBtn {
-            0% { opacity: 0; transform: translateY(15px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -295,62 +187,45 @@
     <main class="landing">
         <section class="landing__card">
             <h1 class="landing__title">Front-end Developer</h1>
-            <p class="landing__author">Олександр Долинський</p>
+            <p class="landing__author" id="author"></p>
             <p class="landing__tagline">Логіка та інтерфейсна взаємодія</p>
 
             <nav class="landing__actions">
-
-                <a href="https://t.me/sasha_08170"
-                   class="landing__button landing__button--telegram"
-                   target="_blank">
-                    <i class="fa-brands fa-telegram"></i>
-                    Telegram
-                </a>
-
-                <a href="https://wa.me/380973234711"
-                   class="landing__button landing__button--whatsapp"
-                   target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp
-                </a>
-
-                <a href="https://maps.app.goo.gl/BywmyeLitPvc8C499"
-                   class="landing__button landing__button--maps"
-                   target="_blank">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Google Maps
-                </a>
-
+                <a href="https://www.linkedin.com/in/sashasoftfrontend/" class="landing__button landing__button--linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://t.me/sasha_08170" class="landing__button landing__button--telegram" target="_blank" rel="noopener">Telegram</a>
+                <a href="https://wa.me/380973234711" class="landing__button landing__button--whatsapp" target="_blank" rel="noopener">WhatsApp</a>
             </nav>
         </section>
     </main>
 
     <script>
-        let targetX = 0, targetY = 0;
-        let currentX = 0, currentY = 0;
+        const text = "Олександр Долинський"; let i = 0;
+        (function type(){ if(i < text.length){ document.getElementById("author").textContent += text.charAt(i); i++; setTimeout(type, 80); }})();
+
+        let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
 
         document.addEventListener("mousemove", (e) => {
-            targetX = (e.clientX - window.innerWidth / 2) / 160;
-            targetY = (e.clientY - window.innerHeight / 2) / 160;
+            targetX = (e.clientX - window.innerWidth / 2) / 180;
+            targetY = (e.clientY - window.innerHeight / 2) / 180;
         });
 
-        function animate() {
-            currentX += (targetX - currentX) * 0.07;
-            currentY += (targetY - currentY) * 0.07;
+        (function animate(){
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
 
             document.querySelector(".parallax-bg").style.transform =
-                `translate(${currentX * 10}px, ${currentY * 10}px) scale(1.03)`;
+                `translateZ(-200px) translate(${currentX * 12}px, ${currentY * 12}px) rotateX(${currentY * -3}deg) rotateY(${currentX * 3}deg)`;
 
             document.querySelectorAll(".parallax__layer").forEach((layer, i) => {
-                const d = (i + 1) * 10;
+                const depth = (i + 1) * 40;
                 layer.style.transform =
-                    `translate(${currentX * d}px, ${currentY * d}px)`;
+                    `translateZ(${-depth}px) translate(${currentX * depth * 0.1}px, ${currentY * depth * 0.1}px)`;
             });
 
             requestAnimationFrame(animate);
-        }
-        animate();
+        })();
     </script>
+
 </body>
 </html>
 
