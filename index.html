@@ -37,10 +37,19 @@
 
         :root {
             --font: "Outfit", sans-serif;
-            --fs-h1: clamp(2.3rem, 5.4vw, 3.55rem);
-            --fs-author: clamp(1.35rem, 2.8vw, 1.9rem);
-            --fs-text: clamp(1.1rem, 2.2vw, 1.35rem);
-            --fs-btn: clamp(1.05rem, 2vw, 1.2rem);
+
+            --fs-h1: clamp(1.9rem, 4.4vw, 3.15rem);
+            --fs-author: clamp(1.2rem, 2.5vw, 1.7rem);
+            --fs-text: clamp(1rem, 2vw, 1.25rem);
+            --fs-btn: clamp(1rem, 1.9vw, 1.15rem);
+
+            --lh-tight: 1.15;
+            --lh-base: 1.45;
+            --lh-relaxed: 1.6;
+
+            --tracking-tight: -0.02em;
+            --tracking-base: -0.01em;
+
             --bg-base: hsl(232 42% 7%);
             --glass: hsl(230 32% 14% / 0.7);
             --glass-border: hsl(220 80% 90% / 0.22);
@@ -53,7 +62,9 @@
             background: var(--bg-base);
             color: #fff;
             overflow: hidden;
-            perspective: 1200px;
+            line-height: var(--lh-base);
+            letter-spacing: var(--tracking-base);
+            -webkit-font-smoothing: antialiased;
         }
 
         .parallax-bg,
@@ -92,15 +103,14 @@
             align-items: center;
             padding: 2rem;
             position: relative;
-            transform-style: preserve-3d;
         }
 
         .landing__card {
             max-width: 44rem;
-            padding: 2.5rem;
+            padding: 2.3rem 2.4rem;
             text-align: center;
             background: var(--glass);
-            border-radius: 1.8rem;
+            border-radius: 1.7rem;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(26px) saturate(140%);
             box-shadow: var(--shadow);
@@ -110,52 +120,51 @@
         }
 
         @keyframes fadeCard {
-            to { opacity: 1; transform: translateZ(60px); }
+            to { opacity: 1; }
         }
 
         .landing__title {
             font-size: var(--fs-h1);
             font-weight: 800;
+            line-height: var(--lh-tight);
+            letter-spacing: var(--tracking-tight);
             background: linear-gradient(135deg, #fff, #e9edff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 0.6rem;
         }
 
         .landing__author {
             font-size: var(--fs-author);
             opacity: .92;
-            margin-bottom: .4rem;
-            min-height: 2.2rem;
+            margin-bottom: .6rem;
+            min-height: 2rem;
         }
 
         .landing__tagline {
             font-size: var(--fs-text);
             opacity: .85;
             margin-bottom: 2rem;
+            line-height: var(--lh-relaxed);
         }
 
         .landing__actions {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1.1rem;
             width: 100%;
             max-width: 320px;
             margin: 0 auto;
         }
 
         .landing__button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem 2rem;
+            padding: 0.95rem 2rem;
             border-radius: 999px;
             font-size: var(--fs-btn);
             font-weight: 600;
-            color: #fff;
             text-decoration: none;
+            color: #fff;
             transition: transform .35s, filter .35s, box-shadow .35s;
-            backdrop-filter: blur(4px);
-            width: 100%;
         }
 
         .landing__button:hover {
@@ -214,7 +223,7 @@
             currentY += (targetY - currentY) * 0.08;
 
             document.querySelector(".parallax-bg").style.transform =
-                `translateZ(-200px) translate(${currentX * 12}px, ${currentY * 12}px) rotateX(${currentY * -3}deg) rotateY(${currentX * 3}deg)`;
+                `translateZ(-200px) translate(${currentX * 12}px, ${currentY * 12}px)`;
 
             document.querySelectorAll(".parallax__layer").forEach((layer, i) => {
                 const depth = (i + 1) * 40;
