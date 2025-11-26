@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Front-end Developer — Олександр Долинський</title>
-    <meta name="description" content="Логіка та інтерфейсна взаємодія." />
-    <meta name="keywords" content="Front-end developer, інтерфейс, логіка, веб-розробка." />
+    <title>Front-end Developer — Oleksandr Dolinskyi</title>
+    <meta name="description" content="Logic and interface interaction." />
+    <meta name="keywords" content="Front-end developer, interface, logic, web development." />
     <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Front-end Developer — Олександр Долинський" />
-    <meta property="og:description" content="Логіка та інтерфейсна взаємодія." />
+    <meta property="og:title" content="Front-end Developer — Oleksandr Dolinskyi" />
+    <meta property="og:description" content="Logic and interface interaction." />
     <meta property="og:url" content="https://sashasoftfrontend.github.io/React/" />
-    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:locale" content="en_GB" />
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Олександр Долинський",
+        "name": "Oleksandr Dolinskyi",
         "jobTitle": "Front-end Developer",
         "url": "https://sashasoftfrontend.github.io/React/",
         "sameAs": [
@@ -33,10 +33,10 @@
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='30%25' cy='30%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='hsl(215,100%25,85%25)'/%3E%3Cstop offset='50%25' stop-color='hsl(255,85%25,65%25)'/%3E%3Cstop offset='100%25' stop-color='hsl(280,70%25,55%25)'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23bg)'/%3E%3C/svg%3E">
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
         :root {
-            --font: "Outfit", sans-serif;
+            --font: "Inter", sans-serif;
 
             --fs-h1: clamp(1.9rem, 4.4vw, 3.15rem);
             --fs-author: clamp(1.2rem, 2.5vw, 1.7rem);
@@ -62,8 +62,7 @@
             background: var(--bg-base);
             color: #fff;
             overflow: hidden;
-            line-height: var(--lh-base);
-            letter-spacing: var(--tracking-base);
+            text-align: center;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -96,18 +95,21 @@
         .parallax__layer:nth-child(3) { transform: translateZ(-50px) scale(1.05); }
         .parallax__layer:nth-child(4) { transform: translateZ(0px) scale(1); }
 
-        .landing {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* ==============================
+           PERFECT VERTICAL + HORIZONTAL CENTER
+        =============================== */
+        main.landing {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center; /* идеальная центровка */
             padding: 2rem;
             position: relative;
         }
 
         .landing__card {
             max-width: 44rem;
-            padding: 2.3rem 2.4rem;
+            padding: 2.4rem;
             text-align: center;
             background: var(--glass);
             border-radius: 1.7rem;
@@ -197,7 +199,7 @@
         <section class="landing__card">
             <h1 class="landing__title">Front-end Developer</h1>
             <p class="landing__author" id="author"></p>
-            <p class="landing__tagline">Логіка та інтерфейсна взаємодія</p>
+            <p class="landing__tagline">Logic and interface interaction</p>
 
             <nav class="landing__actions">
                 <a href="https://www.linkedin.com/in/sashasoftfrontend/" class="landing__button landing__button--linkedin" target="_blank" rel="noopener">LinkedIn</a>
@@ -208,8 +210,16 @@
     </main>
 
     <script>
-        const text = "Олександр Долинський"; let i = 0;
-        (function type(){ if(i < text.length){ document.getElementById("author").textContent += text.charAt(i); i++; setTimeout(type, 80); }})();
+        const text = "Oleksandr Dolinskyi";
+        let i = 0;
+
+        (function type() {
+            if (i < text.length) {
+                document.getElementById("author").textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 80);
+            }
+        })();
 
         let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
 
@@ -218,7 +228,7 @@
             targetY = (e.clientY - window.innerHeight / 2) / 180;
         });
 
-        (function animate(){
+        (function animate() {
             currentX += (targetX - currentX) * 0.08;
             currentY += (targetY - currentY) * 0.08;
 
@@ -237,4 +247,3 @@
 
 </body>
 </html>
-
