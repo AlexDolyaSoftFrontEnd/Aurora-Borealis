@@ -6,66 +6,73 @@
 
     <title>Front-end Developer — Oleksandr Dolinskyi</title>
     <meta name="description" content="Logic and interface interaction." />
-    <meta name="keywords" content="Front-end developer, interface, logic, web development." />
     <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Front-end Developer — Oleksandr Dolinskyi" />
-    <meta property="og:description" content="Logic and interface interaction." />
-    <meta property="og:url" content="https://sashasoftfrontend.github.io/React/" />
-    <meta property="og:locale" content="en_GB" />
+    <!-- Improved fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Oleksandr Dolinskyi",
-        "jobTitle": "Front-end Developer",
-        "url": "https://sashasoftfrontend.github.io/React/",
-        "sameAs": [
-            "https://www.linkedin.com/in/sashasoftfrontend/",
-            "https://t.me/sasha_08170"
-        ]
-    }
-    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+    %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E
+    %3Cdefs%3E
+    %3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E
+    %3Cstop offset='0%25' stop-color='%2300aaff'/%3E
+    %3Cstop offset='100%25' stop-color='%236c3cff'/%3E
+    %3C/linearGradient%3E
+    %3C/defs%3E
 
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='30%25' cy='30%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='hsl(215,100%25,85%25)'/%3E%3Cstop offset='50%25' stop-color='hsl(255,85%25,65%25)'/%3E%3Cstop offset='100%25' stop-color='hsl(280,70%25,55%25)'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect x='90' y='90' width='844' height='844' rx='210' fill='url(%23bg)'/%3E%3C/svg%3E">
+    %3Crect width='240' height='240' rx='56' fill='url(%23g)'/%3E
+
+    %3Cpath d='M70 120a50 50 0 1 1 50 50' fill='none' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
+    %3Cpath d='M120 70v100' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
+    %3C/svg%3E">
+
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-
         :root {
-            --font: "Inter", sans-serif;
+            /* ====================================================
+               TYPOGRAPHY
+            ===================================================== */
+            --font: "Inter", system-ui, sans-serif;
+            --fs-h1: clamp(2rem, 4.5vw, 3.4rem);
+            --fs-author: clamp(1.3rem, 2.6vw, 1.85rem);
+            --fs-text: clamp(1rem, 2vw, 1.3rem);
+            --fs-btn: clamp(1rem, 2vw, 1.15rem);
 
-            --fs-h1: clamp(1.9rem, 4.4vw, 3.15rem);
-            --fs-author: clamp(1.2rem, 2.5vw, 1.7rem);
-            --fs-text: clamp(1rem, 2vw, 1.25rem);
-            --fs-btn: clamp(1rem, 1.9vw, 1.15rem);
+            --lh-tight: 1.1;
+            --lh-base: 1.5;
 
-            --lh-tight: 1.15;
-            --lh-base: 1.45;
-            --lh-relaxed: 1.6;
-
-            --tracking-tight: -0.02em;
+            --tracking-tight: -0.025em;
             --tracking-base: -0.01em;
 
-            --bg-base: hsl(232 42% 7%);
-            --glass: hsl(230 32% 14% / 0.7);
-            --glass-border: hsl(220 80% 90% / 0.22);
-            --shadow: 0 35px 90px hsl(240 60% 5% / 0.7);
+            /* ====================================================
+               DARK THEME COLORS
+            ===================================================== */
+            --bg-base: hsl(230 30% 5%);
+            --bg-gradient-1: hsl(235 45% 10% / 0.8);
+            --bg-gradient-2: hsl(260 35% 12% / 0.8);
+
+            --glass: hsl(230 25% 17% / 0.55);
+            --glass-border: hsl(0 0% 100% / 0.09);
+
+            --shadow: 0 40px 120px hsl(240 70% 2% / 0.9);
+
+            --text-light: #f3f3f7;
+            --text-dim: rgba(240, 240, 255, 0.72);
         }
 
         body {
             margin: 0;
             font-family: var(--font);
             background: var(--bg-base);
-            color: #fff;
+            color: var(--text-light);
             overflow: hidden;
             text-align: center;
             -webkit-font-smoothing: antialiased;
         }
 
+        /* ====================================================
+           PARALLAX BACKGROUND
+        ===================================================== */
         .parallax-bg,
         .parallax__layer {
             position: fixed;
@@ -78,118 +85,124 @@
             width: 120%;
             height: 120%;
             background:
-                radial-gradient(circle at 50% 20%, hsl(222 60% 16% / 0.7), transparent 65%),
-                radial-gradient(circle at 50% 80%, hsl(260 55% 18% / 0.7), transparent 60%);
+                radial-gradient(circle at 50% 18%, var(--bg-gradient-1), transparent 65%),
+                radial-gradient(circle at 50% 82%, var(--bg-gradient-2), transparent 60%);
             z-index: -3;
             transform: translateZ(-200px) scale(1.2);
+            filter: blur(2px) brightness(0.95);
         }
 
         .parallax__layer {
             inset: -40%;
             width: 180%;
             height: 180%;
-            mix-blend-mode: screen;
+            mix-blend-mode: lighten;
+            opacity: 0.25;
         }
 
-        .parallax__layer:nth-child(2) { transform: translateZ(-100px) scale(1.1); }
-        .parallax__layer:nth-child(3) { transform: translateZ(-50px) scale(1.05); }
+        .parallax__layer:nth-child(2) { transform: translateZ(-120px) scale(1.12); }
+        .parallax__layer:nth-child(3) { transform: translateZ(-60px) scale(1.06); }
         .parallax__layer:nth-child(4) { transform: translateZ(0px) scale(1); }
 
-        /* ==============================
-           PERFECT VERTICAL + HORIZONTAL CENTER
-        =============================== */
+        /* ====================================================
+           CENTERED CONTENT
+        ===================================================== */
         main.landing {
             height: 100vh;
-            width: 100%;
             display: grid;
-            place-items: center; /* идеальная центровка */
+            place-items: center;
             padding: 2rem;
-            position: relative;
         }
 
         .landing__card {
-            max-width: 44rem;
-            padding: 2.4rem;
-            text-align: center;
+            max-width: 46rem;
+            padding: 2.8rem;
             background: var(--glass);
-            border-radius: 1.7rem;
+            border-radius: 1.8rem;
             border: 1px solid var(--glass-border);
-            backdrop-filter: blur(26px) saturate(140%);
+            backdrop-filter: blur(32px) saturate(150%);
             box-shadow: var(--shadow);
             transform: translateZ(60px);
             opacity: 0;
-            animation: fadeCard 1.2s ease forwards;
+            animation: fadeIn 1.2s ease forwards;
         }
 
-        @keyframes fadeCard {
+        @keyframes fadeIn {
             to { opacity: 1; }
         }
 
+        /* ====================================================
+           HEADINGS
+        ===================================================== */
         .landing__title {
             font-size: var(--fs-h1);
-            font-weight: 800;
-            line-height: var(--lh-tight);
+            font-weight: 900;
             letter-spacing: var(--tracking-tight);
-            background: linear-gradient(135deg, #fff, #e9edff);
+            line-height: var(--lh-tight);
+            background: linear-gradient(135deg, #ffffff, #dfe5ff, #adb7ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 0.6rem;
+            margin-bottom: .6rem;
         }
 
         .landing__author {
+            color: var(--text-dim);
             font-size: var(--fs-author);
-            opacity: .92;
-            margin-bottom: .6rem;
             min-height: 2rem;
+            margin-bottom: .6rem;
         }
 
         .landing__tagline {
             font-size: var(--fs-text);
-            opacity: .85;
+            color: var(--text-dim);
             margin-bottom: 2rem;
-            line-height: var(--lh-relaxed);
+            line-height: var(--lh-base);
         }
 
+        /* ====================================================
+           BUTTONS
+        ===================================================== */
         .landing__actions {
             display: flex;
             flex-direction: column;
-            gap: 1.1rem;
-            width: 100%;
+            gap: 1.2rem;
             max-width: 320px;
             margin: 0 auto;
         }
 
         .landing__button {
-            padding: 0.95rem 2rem;
+            padding: 1rem 2rem;
             border-radius: 999px;
             font-size: var(--fs-btn);
             font-weight: 600;
             text-decoration: none;
             color: #fff;
-            transition: transform .35s, filter .35s, box-shadow .35s;
+            transition: 0.35s ease;
+            letter-spacing: -0.015em;
+            box-shadow: 0 0 0 transparent;
         }
 
         .landing__button:hover {
             transform: translateY(-4px) scale(1.05);
             filter: brightness(1.2);
-            box-shadow: 0 0 35px rgba(255,255,255,0.35);
+            box-shadow: 0 0 35px rgba(255,255,255,0.25);
         }
 
         .landing__button--linkedin {
-            background: linear-gradient(135deg, #0a66c2, #3fa8ff);
+            background: linear-gradient(135deg, #0a66c2, #3f9dff);
         }
 
         .landing__button--telegram {
-            background: linear-gradient(135deg, #1b8fff, #55c8ff);
+            background: linear-gradient(135deg, #1d9aff, #55caff);
         }
 
         .landing__button--whatsapp {
-            background: linear-gradient(135deg, #1bd267, #37ef87);
+            background: linear-gradient(135deg, #1fc86b, #30ef88);
         }
     </style>
 </head>
-
 <body>
+
     <div class="parallax-bg"></div>
     <div class="parallax__layer"></div>
     <div class="parallax__layer"></div>
@@ -202,14 +215,15 @@
             <p class="landing__tagline">Logic and interface interaction</p>
 
             <nav class="landing__actions">
-                <a href="https://www.linkedin.com/in/sashasoftfrontend/" class="landing__button landing__button--linkedin" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://t.me/sasha_08170" class="landing__button landing__button--telegram" target="_blank" rel="noopener">Telegram</a>
-                <a href="https://wa.me/380973234711" class="landing__button landing__button--whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://www.linkedin.com/in/sashasoftfrontend/" class="landing__button landing__button--linkedin" target="_blank">LinkedIn</a>
+                <a href="https://t.me/sasha_08170" class="landing__button landing__button--telegram" target="_blank">Telegram</a>
+                <a href="https://wa.me/380973234711" class="landing__button landing__button--whatsapp" target="_blank">WhatsApp</a>
             </nav>
         </section>
     </main>
 
     <script>
+        /* Typing author name */
         const text = "Oleksandr Dolinskyi";
         let i = 0;
 
@@ -217,20 +231,22 @@
             if (i < text.length) {
                 document.getElementById("author").textContent += text.charAt(i);
                 i++;
-                setTimeout(type, 80);
+                setTimeout(type, 70);
             }
         })();
 
-        let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+        /* Smooth parallax follow */
+        let targetX = 0, targetY = 0;
+        let currentX = 0, currentY = 0;
 
         document.addEventListener("mousemove", (e) => {
-            targetX = (e.clientX - window.innerWidth / 2) / 180;
-            targetY = (e.clientY - window.innerHeight / 2) / 180;
+            targetX = (e.clientX - window.innerWidth / 2) / 200;
+            targetY = (e.clientY - window.innerHeight / 2) / 200;
         });
 
         (function animate() {
-            currentX += (targetX - currentX) * 0.08;
-            currentY += (targetY - currentY) * 0.08;
+            currentX += (targetX - currentX) * 0.09;
+            currentY += (targetY - currentY) * 0.09;
 
             document.querySelector(".parallax-bg").style.transform =
                 `translateZ(-200px) translate(${currentX * 12}px, ${currentY * 12}px)`;
@@ -238,12 +254,12 @@
             document.querySelectorAll(".parallax__layer").forEach((layer, i) => {
                 const depth = (i + 1) * 40;
                 layer.style.transform =
-                    `translateZ(${-depth}px) translate(${currentX * depth * 0.1}px, ${currentY * depth * 0.1}px)`;
+                    `translateZ(${-depth}px) translate(${currentX * depth * 0.12}px, ${currentY * depth * 0.12}px)`;
             });
 
             requestAnimationFrame(animate);
         })();
     </script>
-
 </body>
 </html>
+
