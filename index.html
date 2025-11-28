@@ -10,7 +10,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml"
           href="data:image/svg+xml,
           %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E
@@ -28,21 +27,16 @@
     <style>
         :root {
             --font: "Inter", system-ui, sans-serif;
-
             --fs-h1: clamp(1.9rem, 4vw, 3.4rem);
             --fs-author: clamp(1.1rem, 2vw, 1.85rem);
             --fs-text: clamp(1rem, 1.7vw, 1.3rem);
             --fs-btn: clamp(1rem, 1.8vw, 1.15rem);
-
             --text-dark: #2e2e45;
             --text-medium: #6b6b88;
-
             --bg: linear-gradient(135deg, #f3f6ff 0%, #ffffff 60%, #eff3ff 100%);
-
             --glass-bg: rgba(255, 255, 255, 0.58);
             --glass-border: rgba(255, 255, 255, 0.7);
             --glass-shadow: 0 25px 70px rgba(120, 140, 255, 0.25);
-
             --layer1: rgba(160, 200, 255, 0.25);
             --layer2: rgba(200, 170, 255, 0.25);
             --layer3: rgba(255, 200, 240, 0.25);
@@ -57,7 +51,6 @@
             text-align: center;
         }
 
-        /* 3D layers */
         .parallax-layer {
             position: fixed;
             inset: -30%;
@@ -97,10 +90,30 @@
         .title {
             font-size: var(--fs-h1);
             font-weight: 900;
-            background: linear-gradient(135deg, #4a52ff, #7f8cff, #a5b1ff);
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            background: linear-gradient(
+                135deg,
+                #3f45ff 0%,
+                #6b74ff 35%,
+                #9aa7ff 70%,
+                #d6e2ff 100%
+            );
             -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.15),
+                0 8px 24px rgba(90, 110, 255, 0.25),
+                0 0 18px rgba(150, 150, 255, 0.22);
             margin-bottom: .6rem;
+            transition: 0.35s ease;
+        }
+
+        .title:hover {
+            transform: translateY(-3px);
+            text-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.18),
+                0 10px 28px rgba(90, 110, 255, 0.33),
+                0 0 24px rgba(160, 160, 255, 0.30);
         }
 
         .author {
@@ -145,8 +158,6 @@
         .telegram { background: linear-gradient(135deg, #1d9aff, #59d0ff); }
         .whatsapp { background: linear-gradient(135deg, #1fc86b, #3ffc98); }
 
-        /* ---------------- MOBILE ADAPTATION ---------------- */
-
         @media (max-width: 768px) {
             .parallax-layer { filter: blur(35px); }
             .landing-card { padding: 2rem; }
@@ -158,10 +169,7 @@
             body { overflow: auto; }
             .parallax-layer { opacity: 0.35; }
             main { padding: 1.2rem; }
-            .landing-card {
-                padding: 1.8rem;
-                border-radius: 1.4rem;
-            }
+            .landing-card { padding: 1.8rem; border-radius: 1.4rem; }
             .actions { gap: .9rem; }
             .btn { padding: 0.9rem 1.6rem; }
         }
@@ -206,9 +214,7 @@
             }
         })();
 
-        /* Reduce parallax intensity on mobile */
         const isMobile = window.innerWidth < 768;
-
         let targetX = 0, targetY = 0;
         let currentX = 0, currentY = 0;
 
@@ -233,3 +239,4 @@
 
 </body>
 </html>
+
