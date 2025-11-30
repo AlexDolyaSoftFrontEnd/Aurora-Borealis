@@ -3,25 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Oleksandr Dolinskyi — Front-end Developer</title>
-<meta name="description" content="Front-end developer focused on logic and interface interaction: building clear, responsive and animated interfaces." />
-<meta name="keywords" content="Front-end developer, JavaScript, React, UI, UX, interfaces, web development, Oleksandr Dolinskyi" />
+
+<title>Oleksandr Dolinskyi — React Developer</title>
+
+<meta name="description" content="React developer focused on logic and interface interaction: building clear, responsive and animated interfaces." />
+<meta name="keywords" content="React developer, JavaScript, React, UI, UX, interfaces, web development, Oleksandr Dolinskyi" />
 <meta name="robots" content="index,follow" />
 <meta name="theme-color" content="#050711" />
 <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Oleksandr Dolinskyi — Front-end Develope" />
-<meta property="og:description" content="Front-end developer focused on logic and interface interaction." />
+<meta property="og:title" content="Oleksandr Dolinskyi — React Developer" />
+<meta property="og:description" content="React developer focused on logic and interface interaction." />
 <meta property="og:url" content="https://sashasoftfrontend.github.io/React/" />
-<meta property="og:site_name" content="Oleksandr Dolinskyi — Front-end Developer" />
-<meta name="twitter:title" content="Oleksandr Dolinskyi — Front-end Develope" />
-<meta name="twitter:description" content="Logic and interface interaction: modern, animated and responsive interfaces." />
+<meta property="og:site_name" content="Oleksandr Dolinskyi — React Developer" />
 
+<meta name="twitter:title" content="Oleksandr Dolinskyi — React Developer" />
+<meta name="twitter:description" content="Logic and interface interaction in React: modern, animated and responsive interfaces." />
+
+<!-- Коммит: подключение шрифта -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
 
+<!-- Коммит: подключение favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
 %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E
 %3Cdefs%3E
@@ -35,14 +40,15 @@
 %3Cpath d='M120 70v100' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
 %3C/svg%3E">
 
+<!-- Коммит: данные -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Oleksandr Dolinskyi",
-  "jobTitle": "Front-end Developer",
+  "jobTitle": "React Developer",
   "url": "https://sashasoftfrontend.github.io/React/",
-  "description": "Front-end developer focused on logic and interface interaction: responsive, animated and accessible interfaces.",
+  "description": "React developer focused on logic and interface interaction: responsive, animated and accessible interfaces.",
   "sameAs": [
     "https://linkedin.com/in/sashasoftfrontend",
     "https://t.me/sasha_08170",
@@ -51,11 +57,12 @@
 }
 </script>
 
+<!-- Коммит: Schema WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Oleksandr Dolinskyi — Front-end Developer",
+  "name": "Oleksandr Dolinskyi — React Developer",
   "url": "https://sashasoftfrontend.github.io/React/",
   "potentialAction": {
     "@type": "SearchAction",
@@ -66,11 +73,28 @@
 </script>
 
 <style>
+
+/* ============================================
+   Коммит: типографика
+============================================ */
+
+html, body {
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility; 
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1; 
+    line-height: 1.55;
+    letter-spacing: -0.015em; 
+}
+
+:root {
+    --text: #ffffff;
+    --text-medium: rgba(235,238,255,0.72);
+}
+
 :root {
     --font: "Inter", system-ui, sans-serif;
     --bg: radial-gradient(circle at 20% 0%, #101826 0%, #050711 35%, #02030a 100%);
-    --text: #ffffff;
-    --text-medium: rgba(230,233,255,0.7);
     --glass-bg: rgba(8, 12, 26, 0.8);
     --glass-border: rgba(200, 210, 255, 0.22);
     --glass-shadow: 0 20px 60px rgba(0,0,0,0.65);
@@ -79,23 +103,48 @@
     --layer3: rgba(180, 90, 255, 0.24);
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
-    height: 100%;
-}
+html, body { height: 100%; }
 
 body {
     margin: 0;
     background: var(--bg);
     font-family: var(--font);
-    color: var(--text);
     overflow: hidden;
     text-align: center;
 }
+
+/* ================================================
+   Коммит: заголовок
+================================================ */
+
+.author {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: #ffffff;
+    margin: 0 0 -5px 0; 
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+}
+
+.tagline {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(220, 220, 245, 0.85);
+    margin: 0 0 20px 0; 
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ================================================
+   Коммит: сцена с параллаксом
+================================================ */
 
 .parallax-layer,
 .fog-layer,
@@ -108,405 +157,214 @@ body {
         filter 1.4s cubic-bezier(.22,.55,.23,1);
 }
 
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 1px, transparent 1px),
-        radial-gradient(circle at 30% 80%, rgba(255,255,255,0.8) 0 1px, transparent 1px),
-        radial-gradient(circle at 70% 30%, rgba(220,230,255,0.8) 0 1px, transparent 1px),
-        radial-gradient(circle at 90% 60%, rgba(255,255,255,0.7) 0 1px, transparent 1px);
-    background-size: 300px 300px, 260px 260px, 340px 340px, 380px 380px;
-    background-repeat: repeat;
-    opacity: 0.55;
-}
+.stars { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+background:
+radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 1px, transparent 1px),
+radial-gradient(circle at 30% 80%, rgba(255,255,255,0.8) 0 1px, transparent 1px),
+radial-gradient(circle at 70% 30%, rgba(220,230,255,0.8) 0 1px, transparent 1px),
+radial-gradient(circle at 90% 60%, rgba(255,255,255,0.7) 0 1px, transparent 1px);
+background-size: 300px 300px, 260px 260px, 340px 340px, 380px 380px;
+background-repeat: repeat; opacity: .55; }
 
 .aurora {
-    position: fixed;
-    inset: -10% -30%;
-    pointer-events: none;
-    z-index: 1;
-    background: linear-gradient(120deg,
-        rgba(60,255,190,0.0) 0%,
-        rgba(60,255,190,0.32) 30%,
-        rgba(120,140,255,0.34) 55%,
-        rgba(220,150,255,0.0) 100%);
-    filter: blur(50px);
-    opacity: 0.8;
-    mix-blend-mode: screen;
-    animation: auroraWave 60s ease-in-out infinite alternate;
+position: fixed; inset: -10% -30%;
+pointer-events: none; z-index: 1;
+background: linear-gradient(120deg,
+rgba(60,255,190,0.0), rgba(60,255,190,0.32),
+rgba(120,140,255,0.34), rgba(220,150,255,0.0));
+filter: blur(50px); opacity: .8; mix-blend-mode: screen;
+animation: auroraWave 60s ease-in-out infinite alternate;
 }
 
 @keyframes auroraWave {
-    0% {
-        transform: translate3d(-40px,10px,0);
-    }
-    100% {
-        transform: translate3d(40px,-20px,0);
-    }
+from { transform: translate3d(-40px,10px,0); }
+to   { transform: translate3d(40px,-20px,0); }
 }
 
 .parallax-layer {
-    position: fixed;
-    inset: -30%;
-    width: 160%;
-    height: 160%;
-    border-radius: 50%;
-    filter: blur(90px);
-    mix-blend-mode: screen;
-    pointer-events: none;
-    z-index: 1;
+position: fixed; inset: -30%; width: 160%; height: 160%;
+border-radius: 50%; filter: blur(90px);
+pointer-events: none; mix-blend-mode: screen; z-index: 1;
 }
-
-.layer-1 {
-    background: var(--layer1);
-}
-
-.layer-2 {
-    background: var(--layer2);
-}
-
-.layer-3 {
-    background: var(--layer3);
-}
+.layer-1 { background: var(--layer1); }
+.layer-2 { background: var(--layer2); }
+.layer-3 { background: var(--layer3); }
 
 .fog-layer {
-    position: fixed;
-    inset: -20%;
-    z-index: 3;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    filter: blur(26px);
-    opacity: 0.42;
+position: fixed; inset: -20%; z-index: 3;
+pointer-events: none; mix-blend-mode: screen;
+filter: blur(26px); opacity: .42;
 }
-
 .fog-top {
-    background:
-        radial-gradient(circle at 10% 0%, rgba(255,255,255,0.12) 0, transparent 55%),
-        radial-gradient(circle at 60% 8%, rgba(220,230,255,0.12) 0, transparent 60%);
-    animation: fogTop 90s linear infinite alternate;
+background:
+radial-gradient(circle at 10% 0%, rgba(255,255,255,0.12), transparent 55%),
+radial-gradient(circle at 60% 8%, rgba(220,230,255,0.12), transparent 60%);
+animation: fogTop 90s linear infinite alternate;
 }
-
 .fog-bottom {
-    background:
-        radial-gradient(circle at 0% 100%, rgba(220,230,255,0.14) 0, transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(255,255,255,0.09) 0, transparent 60%);
-    animation: fogBottom 120s linear infinite alternate;
+background:
+radial-gradient(circle at 0% 100%, rgba(220,230,255,0.14), transparent 60%),
+radial-gradient(circle at 100% 100%, rgba(255,255,255,0.09), transparent 60%);
+animation: fogBottom 120s linear infinite alternate;
 }
 
 @keyframes fogTop {
-    0% {
-        transform: translateY(-30px) scale(1.05);
-    }
-    100% {
-        transform: translateY(30px) scale(1.09);
-    }
+from { transform: translateY(-30px) scale(1.05); }
+to   { transform: translateY(30px) scale(1.09); }
 }
-
 @keyframes fogBottom {
-    0% {
-        transform: translateY(30px) scale(1.05);
-    }
-    100% {
-        transform: translateY(-30px) scale(1.10);
-    }
+from { transform: translateY(30px) scale(1.05); }
+to   { transform: translateY(-30px) scale(1.10); }
 }
 
 .moon {
-    position: fixed;
-    top: 6vh;
-    right: 8vw;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 30% 30%, #ffffff 0%, #f4f7ff 40%, #b8c4ff 70%, transparent 100%);
-    box-shadow:
-        0 0 40px rgba(200,220,255,0.85),
-        0 0 90px rgba(140,170,255,0.6);
-    z-index: 4;
-    pointer-events: none;
+position: fixed; top: 6vh; right: 8vw;
+width: 80px; height: 80px; border-radius: 50%;
+background:
+radial-gradient(circle at 30% 30%, #fff, #f4f7ff 40%, #b8c4ff 70%, transparent);
+box-shadow:
+0 0 40px rgba(200,220,255,0.85),
+0 0 90px rgba(140,170,255,0.6);
+z-index: 4; pointer-events: none;
 }
 
 main {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 1.5rem;
-    z-index: 6;
+min-height: 100vh;
+display: grid; place-items: center;
+padding: 1.5rem; z-index: 6;
 }
 
 .landing-card {
-    width: min(92%, 44rem);
-    padding: 2rem 2.4rem;
-    background: var(--glass-bg);
-    border-radius: 1.4rem;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(22px) saturate(160%);
-    box-shadow: var(--glass-shadow);
-    opacity: 0;
-    animation: fadeIn 1.4s ease forwards;
+width: min(92%, 44rem);
+padding: 2rem 2.4rem;
+background: var(--glass-bg);
+border-radius: 1.4rem;
+border: 1px solid var(--glass-border);
+backdrop-filter: blur(22px) saturate(160%);
+box-shadow: var(--glass-shadow);
+opacity: 0; animation: fadeIn 1.4s ease forwards;
 }
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-.author {
-    font-size: clamp(1.1rem, 2vw, 1.8rem);
-    color: rgba(255,255,255,0.88);
-    margin: 0 0 0.4rem;
-}
-
-.tagline {
-    font-size: clamp(1rem, 1.7vw, 1.3rem);
-    color: rgba(255,255,255,0.82);
-    margin: 0 0 1.6rem;
-}
+@keyframes fadeIn { to { opacity: 1; } }
 
 .actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    max-width: 300px;
-    margin: 0 auto;
+display: flex; flex-direction: column;
+gap: .9rem; max-width: 300px; margin: 0 auto;
 }
 
 .btn {
-    padding: 0.9rem 1.8rem;
-    border-radius: 100px;
-    background: linear-gradient(135deg, #2a7bff, #6a8dff);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: clamp(1rem, 1.8vw, 1.1rem);
-    box-shadow: 0 12px 22px rgba(0,0,0,0.4);
-    transition: transform .35s ease, box-shadow .35s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+padding: .9rem 1.8rem;
+border-radius: 100px;
+background: linear-gradient(135deg, #2a7bff, #6a8dff);
+color: #fff; text-decoration: none; font-weight:600;
+font-size: clamp(1rem,1.8vw,1.1rem);
+box-shadow: 0 12px 22px rgba(0,0,0,0.4);
+transition: .35s; display:flex; justify-content:center;
 }
-
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 32px rgba(0,0,0,0.6);
+transform: translateY(-3px);
+box-shadow: 0 18px 32px rgba(0,0,0,0.6);
 }
 
 .firefly {
-    position: fixed;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: radial-gradient(circle,
-        rgba(255,255,255,0.9) 0%,
-        rgba(120,180,255,0.6) 60%,
-        transparent 100%);
-    pointer-events: none;
-    opacity: 0.32;
-    filter: blur(1.2px);
-    animation: fly 32s infinite ease-in-out;
-    z-index: 5;
+position: fixed; width:6px; height:6px; border-radius:50%;
+background: radial-gradient(circle, #fff,
+rgba(120,180,255,0.6), transparent);
+pointer-events:none; opacity:.32; filter:blur(1.2px);
+animation: fly 32s infinite ease-in-out; z-index:5;
 }
-
 @keyframes fly {
-    0% {
-        transform: translate(0,0) scale(0.8);
-    }
-    25% {
-        transform: translate(60px,-120px) scale(1);
-    }
-    50% {
-        transform: translate(-80px,60px) scale(1.2);
-    }
-    75% {
-        transform: translate(30px,-70px) scale(1);
-    }
-    100% {
-        transform: translate(0,0) scale(0.8);
-    }
+0%{transform:translate(0,0)scale(.8);}
+25%{transform:translate(60px,-120px)scale(1);}
+50%{transform:translate(-80px,60px)scale(1.2);}
+75%{transform:translate(30px,-70px)scale(1);}
+100%{transform:translate(0,0)scale(.8);}
 }
 
-@media (max-width: 1024px) {
-    .landing-card {
-        width: min(96%, 40rem);
-        padding: 1.9rem 2.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        overflow: hidden;
-    }
-
-    main {
-        padding: 1.25rem;
-    }
-
-    .landing-card {
-        width: 100%;
-        max-width: 34rem;
-        padding: 1.8rem 1.9rem;
-        border-radius: 1.3rem;
-    }
-
-    .parallax-layer {
-        filter: blur(70px);
-    }
-
-    .fog-layer {
-        opacity: 0.34;
-    }
-
-    .moon {
-        width: 70px;
-        height: 70px;
-        top: 5vh;
-        right: 6vw;
-    }
-
-    .actions {
-        max-width: 100%;
-        gap: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 1.1rem;
-    }
-
-    .landing-card {
-        padding: 1.5rem 1.6rem;
-        border-radius: 1.2rem;
-    }
-
-    .title {
-        font-size: 1.9rem;
-    }
-
-    .author {
-        font-size: 1.2rem;
-    }
-
-    .tagline {
-        font-size: 0.98rem;
-        margin-bottom: 1.4rem;
-    }
-
-    .btn {
-        font-size: 0.95rem;
-        padding: 0.8rem 1.4rem;
-    }
-
-    .moon {
-        width: 60px;
-        height: 60px;
-        top: 4vh;
-        right: 5vw;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<div class="stars" aria-hidden="true"></div>
-<div class="aurora" aria-hidden="true"></div>
-
-<div class="parallax-layer layer-1" aria-hidden="true"></div>
-<div class="parallax-layer layer-2" aria-hidden="true"></div>
-<div class="parallax-layer layer-3" aria-hidden="true"></div>
-
-<div class="fog-layer fog-top" aria-hidden="true"></div>
-<div class="fog-layer fog-bottom" aria-hidden="true"></div>
-
-<div class="moon" aria-hidden="true"></div>
+<!-- Сцена -->
+<div class="stars"></div>
+<div class="aurora"></div>
+<div class="parallax-layer layer-1"></div>
+<div class="parallax-layer layer-2"></div>
+<div class="parallax-layer layer-3"></div>
+<div class="fog-layer fog-top"></div>
+<div class="fog-layer fog-bottom"></div>
+<div class="moon"></div>
 
 <script>
+/* Коммит: спавн светлячков */
 const FIREFLIES = 40;
 for (let i = 0; i < FIREFLIES; i++) {
     const f = document.createElement("div");
     f.className = "firefly";
-    f.style.left = Math.random() * 100 + "vw";
-    f.style.top = Math.random() * 100 + "vh";
-    f.style.animationDelay = (Math.random() * 10) + "s";
-    f.style.animationDuration = (22 + Math.random() * 12) + "s";
+    f.style.left = Math.random()*100 + "vw";
+    f.style.top  = Math.random()*100 + "vh";
+    f.style.animationDelay = Math.random()*10 + "s";
+    f.style.animationDuration = 22 + Math.random()*12 + "s";
     document.body.appendChild(f);
 }
 </script>
 
 <main>
-    <section class="landing-card" aria-label="Front-end developer profile">
-        <h1 class="author" id="author"></h1>
-        <p class="tagline">Front-end developer</p>
+<section class="landing-card">
+    <h1 class="author" id="author"></h1>
+    <p class="tagline">React developer</p>
 
-        <div class="actions">
-            <a href="https://linkedin.com/in/sashasoftfrontend" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
-                LinkedIn
-            </a>
-            <a href="https://t.me/sasha_08170" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Open Telegram chat">
-                Telegram
-            </a>
-            <a href="https://wa.me/380973234711" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp chat">
-                WhatsApp
-            </a>
-        </div>
-    </section>
+    <div class="actions">
+        <a href="https://linkedin.com/in/sashasoftfrontend" class="btn">LinkedIn</a>
+        <a href="https://t.me/sasha_08170" class="btn">Telegram</a>
+        <a href="https://wa.me/380973234711" class="btn">WhatsApp</a>
+    </div>
+</section>
 </main>
 
 <script>
-const nameStr = "Oleksandr Dolinskyi";
-let nameIndex = 0;
-(function type() {
-    if (nameIndex < nameStr.length) {
-        document.getElementById("author").textContent += nameStr[nameIndex];
-        nameIndex++;
-        setTimeout(type, 55);
+/* Коммит: эффект печатания */
+const nameStr="Oleksandr Dolinskyi";let nameIndex=0;
+(function type(){
+    if(nameIndex<nameStr.length){
+        document.getElementById("author").textContent+=nameStr[nameIndex];
+        nameIndex++; setTimeout(type,55);
     }
 })();
 </script>
 
 <script>
-const layers = document.querySelectorAll(".parallax-layer");
-const fogTop = document.querySelector(".fog-top");
-const fogBottom = document.querySelector(".fog-bottom");
-const moon = document.querySelector(".moon");
-const firefliesEls = document.querySelectorAll(".firefly");
+/* Параллакс */
+const layers=document.querySelectorAll(".parallax-layer");
+const fogTop=document.querySelector(".fog-top");
+const fogBottom=document.querySelector(".fog-bottom");
+const moon=document.querySelector(".moon");
+const firefliesEls=document.querySelectorAll(".firefly");
 
-let mouseX = 0, mouseY = 0;
-let targetX = 0, targetY = 0;
+let mouseX=0, mouseY=0, targetX=0, targetY=0;
 
-document.addEventListener("mousemove", (e) => {
-    targetX = (e.clientX - innerWidth / 2) / innerWidth;
-    targetY = (e.clientY - innerHeight / 2) / innerHeight;
+document.addEventListener("mousemove", e=>{
+    targetX=(e.clientX-innerWidth/2)/innerWidth;
+    targetY=(e.clientY-innerHeight/2)/innerHeight;
 });
 
-function animate() {
-    mouseX += (targetX - mouseX) * 0.04;
-    mouseY += (targetY - mouseY) * 0.04;
+function animate(){
+    mouseX+=(targetX-mouseX)*0.04;
+    mouseY+=(targetY-mouseY)*0.04;
 
-    layers.forEach((layer, i) => {
-        const depth = (i + 1) * 20;
-        layer.style.transform =
-            "translate(" + (mouseX * depth) + "px, " + (mouseY * depth) + "px)";
+    layers.forEach((layer,i)=>{
+        const depth=(i+1)*20;
+        layer.style.transform = `translate(${mouseX*depth}px,${mouseY*depth}px)`;
     });
 
-    fogTop.style.transform =
-        "translate(" + (mouseX * 60) + "px, " + (mouseY * 50) + "px)";
-    fogBottom.style.transform =
-        "translate(" + (mouseX * -50) + "px, " + (mouseY * -40) + "px)";
+    fogTop.style.transform = `translate(${mouseX*60}px,${mouseY*50}px)`;
+    fogBottom.style.transform = `translate(${mouseX*-50}px,${mouseY*-40}px)`;
+    moon.style.transform = `translate(${mouseX*-30}px,${mouseY*-20}px)`;
 
-    moon.style.transform =
-        "translate(" + (mouseX * -30) + "px, " + (mouseY * -20) + "px)";
-
-    firefliesEls.forEach((f, i) => {
-        const drift = (i % 6) * 1.4 + 1.4;
-        f.style.marginLeft = (mouseX * drift) + "px";
-        f.style.marginTop = (mouseY * drift) + "px";
+    firefliesEls.forEach((f,i)=>{
+        const drift=(i%6)*1.4+1.4;
+        f.style.marginLeft=mouseX*drift+"px";
+        f.style.marginTop =mouseY*drift+"px";
     });
 
     requestAnimationFrame(animate);
@@ -514,6 +372,18 @@ function animate() {
 animate();
 </script>
 
+<!-- Защита от копирования -->
+<script>
+document.addEventListener("selectstart",e=>e.preventDefault());
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("dragstart",e=>e.preventDefault());
+document.addEventListener("keydown",e=>{
+    if(e.key==="F12" || (e.ctrlKey&&e.shiftKey&&["I","J","C"].includes(e.key)) || (e.ctrlKey&&["U","S"].includes(e.key))){
+        e.preventDefault();
+        alert("Viewing source is disabled.");
+    }
+});
+</script>
+
 </body>
 </html>
-
