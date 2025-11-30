@@ -3,265 +3,262 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Oleksandr Dolinskyi — React Developer</title>
-
-<meta name="description" content="React developer focused on logic and interface interaction: building clear, responsive and animated interfaces." />
-<meta name="keywords" content="React developer, JavaScript, React, UI, UX, interfaces, web development, Oleksandr Dolinskyi" />
-<meta name="robots" content="index,follow" />
-<meta name="theme-color" content="#050711" />
+<meta name="description" content="React developer focused on logic and interface interaction." />
 <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
-
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Oleksandr Dolinskyi — React Developer" />
-<meta property="og:description" content="React developer focused on logic and interface interaction." />
-<meta property="og:url" content="https://sashasoftfrontend.github.io/React/" />
-<meta property="og:site_name" content="Oleksandr Dolinskyi — React Developer" />
-
-<meta name="twitter:title" content="Oleksandr Dolinskyi — React Developer" />
-<meta name="twitter:description" content="Logic and interface interaction in React: modern, animated and responsive interfaces." />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
-%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E
-%3Cdefs%3E
-%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E
-%3Cstop offset='0%25' stop-color='%2300aaff'/%3E
-%3Cstop offset='100%25' stop-color='%236c3cff'/%3E
-%3C/linearGradient%3E
-%3C/defs%3E
-%3Crect width='240' height='240' rx='56' fill='url(%23g)'/%3E
-%3Cpath d='M70 120a50 50 0 1 1 50 50' fill='none' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
-%3Cpath d='M120 70v100' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
-%3C/svg%3E">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Oleksandr Dolinskyi",
-  "jobTitle": "React Developer",
-  "url": "https://sashasoftfrontend.github.io/React/",
-  "description": "React developer focused on logic and interface interaction: responsive, animated and accessible interfaces.",
-  "sameAs": [
-    "https://linkedin.com/in/sashasoftfrontend",
-    "https://t.me/sasha_08170",
-    "https://wa.me/380973234711"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Oleksandr Dolinskyi — React Developer",
-  "url": "https://sashasoftfrontend.github.io/React/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://sashasoftfrontend.github.io/React/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
 <style>
-
 html, body {
-    -webkit-font-smoothing: antialiased; 
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility; 
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1; 
+    text-rendering: optimizeLegibility;
     line-height: 1.55;
-    letter-spacing: -0.015em; 
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="amoled"]) {
+        --moon-opacity: 1;
+        --moon-size: clamp(65px, 8vw, 110px);
+        --moon-glow:
+            0 0 90px rgba(255,255,255,0.85),
+            0 0 140px rgba(160,180,255,0.55);
+    }
+}
+
+:root[data-theme="amoled"] {
+    --text: #ffffff;
+    --text-medium: rgba(255,255,255,0.6);
+    --bg: #000;
+    --glass-bg: rgba(0,0,0,0.55);
+    --glass-border: rgba(255,255,255,0.08);
+    --layer1: transparent;
+    --layer2: transparent;
+    --layer3: transparent;
+    --moon-opacity: 0;
+}
+
+:root[data-theme="amoled"] .moon,
+:root[data-theme="amoled"] .aurora,
+:root[data-theme="amoled"] .stars,
+:root[data-theme="amoled"] .parallax-layer,
+:root[data-theme="amoled"] .fog-layer {
+    opacity: 0 !important;
 }
 
 :root {
     --text: #ffffff;
-    --text-medium: rgba(235,238,255,0.72);
-}
-
-:root {
+    --text-medium: rgba(235,238,255,0.78);
     --font: "Inter", system-ui, sans-serif;
     --bg: radial-gradient(circle at 20% 0%, #101826 0%, #050711 35%, #02030a 100%);
-    --glass-bg: rgba(8, 12, 26, 0.8);
-    --glass-border: rgba(200, 210, 255, 0.22);
+    --glass-bg: rgba(8,12,26,0.8);
+    --glass-border: rgba(200,210,255,0.22);
     --glass-shadow: 0 20px 60px rgba(0,0,0,0.65);
-    --layer1: rgba(30, 160, 110, 0.30);
-    --layer2: rgba(80, 110, 255, 0.28);
-    --layer3: rgba(180, 90, 255, 0.24);
+    --layer1: rgba(30,160,110,0.28);
+    --layer2: rgba(80,110,255,0.25);
+    --layer3: rgba(180,90,255,0.22);
+    --moon-size: clamp(60px, 7vw, 100px);
+    --moon-opacity: 1;
+    --moon-glow:
+        0 0 70px rgba(255,255,255,0.75),
+        0 0 120px rgba(160,180,255,0.45);
 }
 
 * { box-sizing: border-box; }
-
-html, body { height: 100%; }
+html, body { height: 100%; overflow: hidden; }
 
 body {
-    margin: 0;
     background: var(--bg);
     font-family: var(--font);
-    overflow: hidden;
     text-align: center;
 }
 
+.theme-toggle {
+    position: fixed;
+    bottom: clamp(14px, 3vw, 28px);
+    right: clamp(14px, 3vw, 28px);
+    z-index: 9999;
+    width: clamp(46px, 8vw, 60px);
+    height: clamp(46px, 8vw, 60px);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px) saturate(150%);
+    transition: .25s ease;
+}
+.theme-toggle:hover {
+    background: rgba(0,0,0,0.6);
+}
+.theme-toggle svg {
+    width: clamp(20px, 4vw, 28px);
+    height: clamp(20px, 4vw, 28px);
+    fill: white;
+}
+:root[data-theme="amoled"] .theme-toggle {
+    background: rgba(25,25,25,0.75);
+    border-color: rgba(255,255,255,0.4);
+}
+:root[data-theme="amoled"] .theme-toggle svg {
+    fill: #bfbfbf;
+}
 
 .author {
-    font-size: 50px;
+    font-size: clamp(32px, 6vw, 56px);
     font-weight: 700;
-    letter-spacing: 0em;
-    color: #ffffff;
-    margin: 0 0 -5px 0; 
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    font-optical-sizing: auto;
-    text-rendering: optimizeLegibility;
+    color: var(--text);
+    margin: 0;
+    user-select: none;
 }
 
 .tagline {
-    font-size: 40px;
+    font-size: clamp(22px, 4vw, 38px);
     font-weight: 600;
-    letter-spacing: -0.01em;
-    color: rgba(220, 220, 245, 0.85);
-    margin: 0 0 20px 0; 
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    font-optical-sizing: auto;
-    text-rendering: optimizeLegibility;
+    color: var(--text-medium);
+    margin: 0 0 clamp(8px, 2vw, 18px) 0;
 }
 
-.parallax-layer,
-.fog-layer,
-.moon,
-.firefly,
-.landing-card {
-    transition:
-        transform 1.5s cubic-bezier(.15,.55,.25,1),
-        opacity 1.4s cubic-bezier(.22,.55,.23,1),
-        filter 1.4s cubic-bezier(.22,.55,.23,1);
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .45;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.9) 0 1px, transparent 1px),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,.8) 0 1px, transparent 1px),
+        radial-gradient(circle at 70% 30%, rgba(220,230,255,.8) 0 1px, transparent 1px),
+        radial-gradient(circle at 90% 60%, rgba(255,255,255,.7) 0 1px, transparent 1px);
+    background-size: 280px 280px, 240px 240px, 320px 320px, 360px 360px;
 }
-
-.stars { position: fixed; inset: 0; pointer-events: none; z-index: 0;
-background:
-radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 1px, transparent 1px),
-radial-gradient(circle at 30% 80%, rgba(255,255,255,0.8) 0 1px, transparent 1px),
-radial-gradient(circle at 70% 30%, rgba(220,230,255,0.8) 0 1px, transparent 1px),
-radial-gradient(circle at 90% 60%, rgba(255,255,255,0.7) 0 1px, transparent 1px);
-background-size: 300px 300px, 260px 260px, 340px 340px, 380px 380px;
-background-repeat: repeat; opacity: .55; }
 
 .aurora {
-position: fixed; inset: -10% -30%;
-pointer-events: none; z-index: 1;
-background: linear-gradient(120deg,
-rgba(60,255,190,0.0), rgba(60,255,190,0.32),
-rgba(120,140,255,0.34), rgba(220,150,255,0.0));
-filter: blur(50px); opacity: .8; mix-blend-mode: screen;
-animation: auroraWave 60s ease-in-out infinite alternate;
-}
-
-@keyframes auroraWave {
-from { transform: translate3d(-40px,10px,0); }
-to   { transform: translate3d(40px,-20px,0); }
+    position: fixed;
+    inset: -12% -30%;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(120deg,
+        rgba(60,255,190,0),
+        rgba(60,255,190,0.28),
+        rgba(120,140,255,0.32),
+        rgba(220,150,255,0)
+    );
+    filter: blur(50px);
+    opacity: .75;
 }
 
 .parallax-layer {
-position: fixed; inset: -30%; width: 160%; height: 160%;
-border-radius: 50%; filter: blur(90px);
-pointer-events: none; mix-blend-mode: screen; z-index: 1;
+    position: fixed;
+    inset: -30%;
+    width: 160%;
+    height: 160%;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+    mix-blend-mode: screen;
+    z-index: 1;
 }
+
 .layer-1 { background: var(--layer1); }
 .layer-2 { background: var(--layer2); }
 .layer-3 { background: var(--layer3); }
 
 .fog-layer {
-position: fixed; inset: -20%; z-index: 3;
-pointer-events: none; mix-blend-mode: screen;
-filter: blur(26px); opacity: .42;
-}
-.fog-top {
-background:
-radial-gradient(circle at 10% 0%, rgba(255,255,255,0.12), transparent 55%),
-radial-gradient(circle at 60% 8%, rgba(220,230,255,0.12), transparent 60%);
-animation: fogTop 90s linear infinite alternate;
-}
-.fog-bottom {
-background:
-radial-gradient(circle at 0% 100%, rgba(220,230,255,0.14), transparent 60%),
-radial-gradient(circle at 100% 100%, rgba(255,255,255,0.09), transparent 60%);
-animation: fogBottom 120s linear infinite alternate;
-}
-
-@keyframes fogTop {
-from { transform: translateY(-30px) scale(1.05); }
-to   { transform: translateY(30px) scale(1.09); }
-}
-@keyframes fogBottom {
-from { transform: translateY(30px) scale(1.05); }
-to   { transform: translateY(-30px) scale(1.10); }
+    position: fixed;
+    inset: -20%;
+    pointer-events: none;
+    filter: blur(24px);
+    mix-blend-mode: screen;
+    opacity: .38;
+    z-index: 3;
 }
 
 .moon {
-position: fixed; top: 6vh; right: 8vw;
-width: 80px; height: 80px; border-radius: 50%;
-background:
-radial-gradient(circle at 30% 30%, #fff, #f4f7ff 40%, #b8c4ff 70%, transparent);
-box-shadow:
-0 0 40px rgba(200,220,255,0.85),
-0 0 90px rgba(140,170,255,0.6);
-z-index: 4; pointer-events: none;
+    position: fixed;
+    top: clamp(4vh, 6vw, 8vh);
+    right: clamp(5vw, 8vw, 10vw);
+    width: var(--moon-size);
+    height: var(--moon-size);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 4;
+    opacity: var(--moon-opacity);
+    background: radial-gradient(circle at 35% 35%, #fff, #f8f8ff 42%, #d0d9ff 65%, transparent);
+    box-shadow: var(--moon-glow);
+    transition: opacity .35s ease, transform .35s ease;
 }
 
 main {
-min-height: 100vh;
-display: grid; place-items: center;
-padding: 1.5rem; z-index: 6;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: clamp(12px, 4vw, 32px);
+    z-index: 6;
 }
 
 .landing-card {
-width: min(92%, 44rem);
-padding: 2rem 2.4rem;
-background: var(--glass-bg);
-border-radius: 1.4rem;
-border: 1px solid var(--glass-border);
-backdrop-filter: blur(22px) saturate(160%);
-box-shadow: var(--glass-shadow);
-opacity: 0; animation: fadeIn 1.4s ease forwards;
+    width: min(92%, 48rem);
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+    background: var(--glass-bg);
+    border-radius: 1.4rem;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: var(--glass-shadow);
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
 }
+
 @keyframes fadeIn { to { opacity: 1; } }
 
 .actions {
-display: flex; flex-direction: column;
-gap: .9rem; max-width: 300px; margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(.6rem, 2vw, 1rem);
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .btn {
-padding: .9rem 1.8rem;
-border-radius: 100px;
-background: linear-gradient(135deg, #2a7bff, #6a8dff);
-color: #fff; text-decoration: none; font-weight:600;
-font-size: clamp(1rem,1.8vw,1.1rem);
-box-shadow: 0 12px 22px rgba(0,0,0,0.4);
-transition: .35s; display:flex; justify-content:center;
+    padding: clamp(.7rem, 2vw, .95rem) clamp(1.4rem, 4vw, 1.8rem);
+    border-radius: 100px;
+    background: linear-gradient(135deg, #2a7bff, #6a8dff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.3vw, 1.12rem);
+    box-shadow: 0 10px 18px rgba(0,0,0,.4);
+    transition: .25s ease;
 }
 .btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 18px 32px rgba(0,0,0,0.6);
+    transform: translateY(-3px);
 }
 
 .firefly {
-position: fixed; width:6px; height:6px; border-radius:50%;
-background: radial-gradient(circle, #fff,
-rgba(120,180,255,0.6), transparent);
-pointer-events:none; opacity:.32; filter:blur(1.2px);
-animation: fly 32s infinite ease-in-out; z-index:5;
+    position: fixed;
+    width: clamp(4px, .9vw, 6px);
+    height: clamp(4px, .9vw, 6px);
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff, rgba(120,180,255,.6), transparent);
+    pointer-events:none;
+    opacity:.28;
+    filter:blur(1px);
+    animation: fly 26s infinite ease-in-out;
+    z-index:5;
 }
+
 @keyframes fly {
-0%{transform:translate(0,0)scale(.8);}
-25%{transform:translate(60px,-120px)scale(1);}
-50%{transform:translate(-80px,60px)scale(1.2);}
-75%{transform:translate(30px,-70px)scale(1);}
-100%{transform:translate(0,0)scale(.8);}
+    0%{transform:translate(0,0)scale(.7);}
+    25%{transform:translate(60px,-110px)scale(.95);}
+    50%{transform:translate(-80px,60px)scale(1.1);}
+    75%{transform:translate(30px,-70px)scale(.95);}
+    100%{transform:translate(0,0)scale(.7);}
 }
 
 </style>
@@ -274,19 +271,23 @@ animation: fly 32s infinite ease-in-out; z-index:5;
 <div class="parallax-layer layer-1"></div>
 <div class="parallax-layer layer-2"></div>
 <div class="parallax-layer layer-3"></div>
-<div class="fog-layer fog-top"></div>
-<div class="fog-layer fog-bottom"></div>
+<div class="fog-layer"></div>
 <div class="moon"></div>
 
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle AMOLED mode">
+    <svg viewBox="0 0 24 24">
+        <path d="M12 2a1 1 0 0 1 1 1v1a8 8 0 1 1-8 8H4a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1 6 6 0 1 0 6-6V3a1 1 0 0 1 1-1z"/>
+    </svg>
+</button>
+
 <script>
-const FIREFLIES = 40;
-for (let i = 0; i < FIREFLIES; i++) {
+for (let i = 0; i < 38; i++) {
     const f = document.createElement("div");
     f.className = "firefly";
     f.style.left = Math.random()*100 + "vw";
     f.style.top  = Math.random()*100 + "vh";
-    f.style.animationDelay = Math.random()*10 + "s";
-    f.style.animationDuration = 22 + Math.random()*12 + "s";
+    f.style.animationDelay = Math.random()*8 + "s";
+    f.style.animationDuration = 18 + Math.random()*10 + "s";
     document.body.appendChild(f);
 }
 </script>
@@ -295,7 +296,6 @@ for (let i = 0; i < FIREFLIES; i++) {
 <section class="landing-card">
     <h1 class="author" id="author"></h1>
     <p class="tagline">React developer</p>
-
     <div class="actions">
         <a href="https://github.com/SashaSoftFrontEnd" target="_blank" class="btn">GitHub</a>
         <a href="https://www.linkedin.com/in/sashasoftfrontend/" target="_blank" class="btn">Linkedin</a>
@@ -306,61 +306,70 @@ for (let i = 0; i < FIREFLIES; i++) {
 </main>
 
 <script>
-const nameStr="Oleksandr Dolinskyi";let nameIndex=0;
-(function type(){
-    if(nameIndex<nameStr.length){
-        document.getElementById("author").textContent+=nameStr[nameIndex];
-        nameIndex++; setTimeout(type,55);
+const nameStr = "Oleksandr Dolinskyi";
+let idx = 0;
+function type() {
+    if (idx < nameStr.length) {
+        document.getElementById("author").textContent += nameStr[idx];
+        idx++;
+        setTimeout(type, 70);
     }
-})();
+}
+setTimeout(type, 300);
 </script>
+
 <script>
 const layers=document.querySelectorAll(".parallax-layer");
-const fogTop=document.querySelector(".fog-top");
-const fogBottom=document.querySelector(".fog-bottom");
+const fog=document.querySelector(".fog-layer");
 const moon=document.querySelector(".moon");
-const firefliesEls=document.querySelectorAll(".firefly");
-
-let mouseX=0, mouseY=0, targetX=0, targetY=0;
-
+const flies=document.querySelectorAll(".firefly");
+let mx=0, my=0, tx=0, ty=0;
 document.addEventListener("mousemove", e=>{
-    targetX=(e.clientX-innerWidth/2)/innerWidth;
-    targetY=(e.clientY-innerHeight/2)/innerHeight;
+    tx=(e.clientX-innerWidth/2)/innerWidth;
+    ty=(e.clientY-innerHeight/2)/innerHeight;
 });
-
 function animate(){
-    mouseX+=(targetX-mouseX)*0.04;
-    mouseY+=(targetY-mouseY)*0.04;
-
+    mx+=(tx-mx)*0.035;
+    my+=(ty-my)*0.035;
     layers.forEach((layer,i)=>{
-        const depth=(i+1)*20;
-        layer.style.transform = `translate(${mouseX*depth}px,${mouseY*depth}px)`;
+        const d=(i+1)*16;
+        layer.style.transform=`translate(${mx*d}px,${my*d}px)`;
     });
-
-    fogTop.style.transform = `translate(${mouseX*60}px,${mouseY*50}px)`;
-    fogBottom.style.transform = `translate(${mouseX*-50}px,${mouseY*-40}px)`;
-    moon.style.transform = `translate(${mouseX*-30}px,${mouseY*-20}px)`;
-
-    firefliesEls.forEach((f,i)=>{
-        const drift=(i%6)*1.4+1.4;
-        f.style.marginLeft=mouseX*drift+"px";
-        f.style.marginTop =mouseY*drift+"px";
+    fog.style.transform=`translate(${mx*45}px,${my*34}px)`;
+    moon.style.transform=`translate(${mx*-18}px,${my*-12}px)`;
+    flies.forEach((f,i)=>{
+        const drift=(i%6)*1.1+1.2;
+        f.style.marginLeft=mx*drift+"px";
+        f.style.marginTop=my*drift+"px";
     });
-
     requestAnimationFrame(animate);
 }
 animate();
 </script>
+
 <script>
-document.addEventListener("selectstart",e=>e.preventDefault());
-document.addEventListener("contextmenu",e=>e.preventDefault());
-document.addEventListener("dragstart",e=>e.preventDefault());
-document.addEventListener("keydown",e=>{
-    if(e.key==="F12" || (e.ctrlKey&&e.shiftKey&&["I","J","C"].includes(e.key)) || (e.ctrlKey&&["U","S"].includes(e.key))){
-        e.preventDefault();
-        alert("Viewing source is disabled.");
+if(localStorage.getItem("theme")==="amoled"){
+    document.documentElement.setAttribute("data-theme","amoled");
+}
+document.getElementById("theme-toggle").addEventListener("click",()=>{
+    const isAmoled=document.documentElement.getAttribute("data-theme")==="amoled";
+    if(isAmoled){
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme","default");
+    } else {
+        document.documentElement.setAttribute("data-theme","amoled");
+        localStorage.setItem("theme","amoled");
     }
 });
 </script>
+
+<script>
+const author=document.querySelector(".author");
+["mousedown","copy","contextmenu"].forEach(ev=>{
+    author.addEventListener(ev,e=>e.preventDefault());
+});
+</script>
+
 </body>
 </html>
+
