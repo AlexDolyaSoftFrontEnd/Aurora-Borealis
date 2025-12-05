@@ -16,7 +16,6 @@
 
 <link rel="canonical" href="https://sashasoftfrontend.github.io/React/" />
 
-
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Alex Dolya — React Developer" />
 <meta property="og:description" content="React developer focused on logic, UI engineering and interactive interfaces." />
@@ -34,7 +33,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
 
-
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
 %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E
 %3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E
@@ -45,29 +43,6 @@
 %3Cpath d='M70 120a50 50 0 1 1 50 50' fill='none' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
 %3Cpath d='M120 70v100' stroke='%23fff' stroke-width='18' stroke-linecap='round'/%3E
 %3C/svg%3E" />
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Alex Dolya",
-  "jobTitle": "React Developer",
-  "url": "https://sashasoftfrontend.github.io/React/",
-  "sameAs": [
-    "https://www.linkedin.com/in/sashasoftfrontend/",
-    "https://t.me/sasha_08170"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance / Remote"
-  },
-  "skills": [
-    "React", "JavaScript", "TypeScript", "Next",
-    "UI Development", "Front-End Architecture", "Animations", "REST API", "CSS / SCSS / Tailwind"
-  ]
-}
-</script>
 
 <style>
 html, body {
@@ -306,6 +281,7 @@ for (let i = 0; i < 38; i++) {
     document.body.appendChild(f);
 }
 </script>
+
 <main>
 <section class="landing-card">
     <h1 class="author" id="author"></h1>
@@ -317,6 +293,7 @@ for (let i = 0; i < 38; i++) {
     </div>
 </section>
 </main>
+
 <script>
 const nameStr = "Alex Dolya";
 let idx = 0;
@@ -329,34 +306,42 @@ function type() {
 }
 setTimeout(type, 300);
 </script>
+
 <script>
 const layers=document.querySelectorAll(".parallax-layer");
 const fog=document.querySelector(".fog-layer");
 const moon=document.querySelector(".moon");
 const flies=document.querySelectorAll(".firefly");
 let mx=0, my=0, tx=0, ty=0;
+
 document.addEventListener("mousemove", e=>{
     tx=(e.clientX-innerWidth/2)/innerWidth;
     ty=(e.clientY-innerHeight/2)/innerHeight;
 });
+
 function animate(){
     mx+=(tx-mx)*0.035;
     my+=(ty-my)*0.035;
+
     layers.forEach((layer,i)=>{
         const d=(i+1)*16;
         layer.style.transform=`translate(${mx*d}px,${my*d}px)`;
     });
+
     fog.style.transform=`translate(${mx*45}px,${my*34}px)`;
     moon.style.transform=`translate(${mx*-18}px,${my*-12}px)`;
+
     flies.forEach((f,i)=>{
         const drift=(i%6)*1.1+1.2;
         f.style.marginLeft=mx*drift+"px";
-        f.style.marginTop=my*drift+"px";
+        ф.style.marginTop=my*drift+"px";
     });
+
     requestAnimationFrame(animate);
 }
 animate();
 </script>
+
 <script>
 const author=document.querySelector(".author");
 ["mousedown","copy","contextmenu"].forEach(ev=>{
@@ -366,5 +351,6 @@ const author=document.querySelector(".author");
 
 </body>
 </html>
+
 
 
